@@ -2,6 +2,18 @@ const produtoSelect = document.getElementById("produto");
 const edicaoSelect = document.getElementById("edicao");
 const resultado = document.getElementById("resultado");
 
+const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantação/";
+
+if (item) {
+  resultado.innerHTML = `⏱️ ${item.horas} horas de implantação`;
+
+  const url = BASE_SP + encodeURIComponent(item.caminho).replace(/%2F/g, "/");
+
+  linkEscopo.href = url;
+  linkEscopo.style.display = "inline-block";
+  linkEscopo.textContent = "📄 Abrir escopo";
+}
+
 // lista produtos únicos
 const produtos = [...new Set(dados.map(d => d.produto))];
 

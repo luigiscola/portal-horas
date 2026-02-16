@@ -1,5 +1,5 @@
 const dados = [
-  { produto: "Vulnerability Manager Plus", edicao: "Enterprise", horas: 10 },
+  { produto: "Vulnerability Manager Plus", edicao: "Enterprise", horas: 10, caminho: "Vulnerability Manager Plus/Vulnerability Manager Plus - Enterprise.docx" }, },
   { produto: "Vulnerability Manager Plus", edicao: "Professional", horas: 8 },
   { produto: "Application Control Plus", edicao: "Professional", horas: 8 },
   { produto: "DeviceControl Plus", edicao: "Professional", horas: 8 },
