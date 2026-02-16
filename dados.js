@@ -4,7 +4,7 @@ const dados = [
   { produto: "Application Control Plus", edicao: "Professional", horas: 8 },
   { produto: "DeviceControl Plus", edicao: "Professional", horas: 8 },
   { produto: "Endpoint DLP Plus", edicao: "Professional", horas: 10 },
-  { produto: "Browser Security Plus", edicao: "Profesisonal", horas: 8 },
+  { produto: "Browser Security Plus", edicao: "Professional", horas: 8 },
   { produto: "MDM Cloud", edicao: "Professional", horas: 12 },
   { produto: "MDM On-Premise", edicao: "Standard", horas: 14 },
   { produto: "MDM On-Premise", edicao: "Professional", horas: 20 },
@@ -57,5 +57,5 @@ const dados = [
   { produto: "ADSelfService Plus", edicao: "Enterprise", horas: 14 },
   { produto: "Analytics Plus", edicao: "Professional", horas: 14 },
   { produto: "Analytics Plus", edicao: "Enterprise", horas: 16 },
-  { produto: "GO-Global", edicao: "-", horas: 2 },
+  { produto: "GO-Global", edicao: "-", horas: 2 }
 ];
