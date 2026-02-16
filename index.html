@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Horas de Implantação</title>
+  <style>
+    body { font-family: Arial; margin: 40px; }
+    select { padding: 8px; margin: 10px 0; width: 300px; }
+    .resultado { 
+        margin-top: 20px; 
+        font-size: 20px; 
+        font-weight: bold;
+        color: #0b5ed7;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Consulta de Horas de Implantação</h2>
+
+<label>Produto:</label><br>
+<select id="produto">
+  <option value="">Selecione</option>
+</select>
+
+<br>
+
+<label>Edição:</label><br>
+<select id="edicao" disabled>
+  <option value="">Selecione</option>
+</select>
+
+<div class="resultado" id="resultado"></div>
+
+<script src="dados.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
