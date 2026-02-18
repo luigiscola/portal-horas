@@ -65,8 +65,7 @@ window.dados = [
 
   { produto: "ADManager Plus", edicao: "Standard", horas: 10, caminho: "ADManager Plus/ADManager Plus - Standard.docx" },
   { produto: "ADManager Plus", edicao: "Professional", horas: 14, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Professional.docx" },
-  { produto: "ADManager Plus", edicao: "Enterprise", horas: 16, caminho: "ADManager Plus/ADManager Plus - Enterprise.docx" },
-
+  
   { produto: "ADSelfService Plus", edicao: "Standard", horas: 10, caminho: "ADSelfService Plus/ADSelfService Plus - Standard.docx" },
   { produto: "ADSelfService Plus", edicao: "Professional", horas: 12, caminho: "ADSelfService Plus/ADSelfService Plus - Professional.docx" },
   { produto: "ADSelfService Plus", edicao: "Enterprise", horas: 14, caminho: "ADSelfService Plus/ADSelfService Plus - Enterprise.docx" },
