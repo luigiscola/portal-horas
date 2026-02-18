@@ -14,13 +14,9 @@ const dados = [
   { produto: "MDM Cloud", edicao: "Standard", horas: 8, caminho: "MDM Cloud/MDM Cloud - Standard.docx" },
   { produto: "MDM Cloud", edicao: "Enterprise", horas: 16, caminho: "MDM Cloud/MDM Cloud - Enterprise.docx" },
 
-  { produto: "MDM On-Premise", edicao: "Standard", horas: 14, caminho: "MDM On-Premise/MDM On-Premise - Standard.docx" },
-  { produto: "MDM On-Premise", edicao: "Professional", horas: 20, caminho: "MDM On-Premise/MDM On-Premise - Professional.docx" },
-  { produto: "MDM On-Premise", edicao: "Enterprise", horas: 24, caminho: "MDM On-Premise/MDM On-Premise - Enterprise.docx" },
-
-  { produto: "Mobile Device Manager Plus", edicao: "Standard", horas: 8, caminho: "Mobile Device Manager Plus/Mobile Device Manager Plus - Standard.docx" },
-  { produto: "Mobile Device Manager Plus", edicao: "Professional", horas: 12, caminho: "Mobile Device Manager Plus/Mobile Device Manager Plus - Professional.docx" },
-  { produto: "Mobile Device Manager Plus", edicao: "Enterprise", horas: 16, caminho: "Mobile Device Manager Plus/Mobile Device Manager Plus - Enterprise.docx" },
+  { produto: "MDM On-Premise", edicao: "Standard", horas: 8, caminho: "Mobile Device Manager Plus/Mobile Device Manager Plus - Standard.docx" },
+  { produto: "MDM On-Premise", edicao: "Professional", horas: 12, caminho: "Mobile Device Manager Plus/Mobile Device Manager Plus - Professional.docx" },
+  { produto: "MDM On-Premise", edicao: "Enterprise", horas: 16, caminho: "Mobile Device Manager Plus/Mobile Device Manager Plus - Enterprise.docx" },
 
   { produto: "Endpoint Central Plus On-Premise", edicao: "Enterprise", horas: 14, caminho: "Endpoint Central Plus On-Premise/Endpoint Central Plus On-Premise - Enterprise.docx" },
   { produto: "Endpoint Central Plus On-Premise", edicao: "Professional", horas: 12, caminho: "Endpoint Central Plus On-Premise/Endpoint Central Plus On-Premise - Professional.docx" },
