@@ -3,6 +3,14 @@ const edicaoSelect = document.getElementById("edicao");
 const resultado = document.getElementById("resultado");
 const linkEscopo = document.getElementById("linkEscopo");
 
+if (!Array.isArray(window.dados)) {
+  console.error("dados.js não carregou ou não definiu a variável 'dados'.");
+  resultado.innerHTML = "Erro: dados não carregaram. Atualize a página (Ctrl+F5) ou contate o suporte.";
+  throw new Error("dados undefined");
+}
+
+const dados = window.dados;
+
 const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantação/";
 
 // lista produtos únicos

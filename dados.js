@@ -1,4 +1,4 @@
-const dados = [
+window.dados = [
   { produto: "Vulnerability Manager Plus", edicao: "Enterprise", horas: 10, caminho: "Vulnerability Manager Plus/Vulnerability Manager Plus - Enterprise.docx" },
   { produto: "Vulnerability Manager Plus", edicao: "Professional", horas: 8, caminho: "Vulnerability Manager Plus/Vulnerability Manager Plus - Professional.docx" },
 
