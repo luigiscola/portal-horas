@@ -3,15 +3,19 @@ const edicaoSelect = document.getElementById("edicao");
 const resultado = document.getElementById("resultado");
 const linkEscopo = document.getElementById("linkEscopo");
 
+// "Implantação" já URL-encoded
+const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantacao/";
+
+// valida se dados carregou
 if (!Array.isArray(window.dados)) {
-  console.error("dados.js não carregou ou não definiu a variável 'dados'.");
-  resultado.innerHTML = "Erro: dados não carregaram. Atualize a página (Ctrl+F5) ou contate o suporte.";
-  throw new Error("dados undefined");
+  console.error("dados.js não carregou ou não definiu 'window.dados'.");
+  if (resultado) {
+    resultado.innerHTML = "Erro ao carregar dados. Tente Ctrl+F5 (Windows) / Cmd+Shift+R (Mac).";
+  }
+  throw new Error("window.dados undefined");
 }
 
 const dados = window.dados;
-
-const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantacao/";
 
 // lista produtos únicos
 const produtos = [...new Set(dados.map(d => d.produto))].sort();
@@ -52,7 +56,6 @@ produtoSelect.addEventListener("change", () => {
     .filter(d => d.produto === produto)
     .map(d => d.edicao);
 
-  // edições únicas
   [...new Set(edicoes)].sort().forEach(ed => {
     const opt = document.createElement("option");
     opt.value = ed;
@@ -71,7 +74,6 @@ edicaoSelect.addEventListener("change", () => {
   esconderLink();
 
   const item = dados.find(d => d.produto === produto && d.edicao === edicao);
-
   if (!item) return;
 
   resultado.innerHTML = `⏱️ ${item.horas} horas de implantação`;
