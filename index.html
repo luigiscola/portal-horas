@@ -75,6 +75,7 @@
 
     @media (max-width: 720px){
       .grid{ grid-template-columns: 1fr; }
+      .header{ flex-direction: column; align-items: flex-start; }
     }
 
     .field label{
@@ -84,6 +85,7 @@
       margin-bottom: 8px;
     }
 
+    /* SELECT */
     select{
       width: 100%;
       padding: 12px 14px;
@@ -100,9 +102,24 @@
       border-color: rgba(47,125,246,0.8);
     }
 
+    /* ✅ FIX Windows: opções invisíveis */
+    select option{
+      color: #111 !important;
+      background: #fff !important;
+    }
+
+    /* alguns browsers respeitam */
+    select option:checked{
+      background: #2f7df6 !important;
+      color: #fff !important;
+    }
+
+    /* ✅ Em vez de opacity (que “lava” o texto no Windows) */
     select:disabled{
-      opacity: 0.55;
       cursor: not-allowed;
+      color: rgba(255,255,255,0.55);
+      background: rgba(255,255,255,0.03);
+      border-color: rgba(255,255,255,0.12);
     }
 
     /* seta do select */
@@ -133,17 +150,17 @@
       min-height: 64px;
     }
 
+    @media (max-width: 720px){
+      .resultBox{ flex-direction: column; align-items: flex-start; }
+      .actions{ width: 100%; justify-content: flex-start; }
+      .btn{ width: 100%; justify-content: center; }
+    }
+
     .resultado{
       font-size: 18px;
       font-weight: 700;
       letter-spacing: -0.2px;
       color: rgba(255,255,255,0.95);
-    }
-
-    .hint{
-      margin: 0;
-      color: var(--muted);
-      font-size: 13px;
     }
 
     .actions{
@@ -260,8 +277,9 @@
     <div class="footer">Centric • ManageEngine • Portal de horas de implantação</div>
   </div>
 
-  <script src="dados.js?v=20260218-1"></script>
-  <script src="app.js?v=20260218-1"></script>
+  <!-- cache-busting -->
+  <script src="dados.js?v=20260218-2"></script>
+  <script src="app.js?v=20260218-2"></script>
 
   <script>
     // Botão limpar (não depende do app.js)
@@ -269,7 +287,6 @@
       const produto = document.getElementById("produto");
       const edicao = document.getElementById("edicao");
       const resultado = document.getElementById("resultado");
-      const hint = document.getElementById("hint");
       const link = document.getElementById("linkEscopo");
 
       produto.value = "";
@@ -277,11 +294,9 @@
       edicao.disabled = true;
 
       resultado.textContent = "Selecione um produto e uma edição.";
-      hint.textContent = "O botão de escopo aparecerá quando houver um arquivo cadastrado.";
       link.style.display = "none";
       link.removeAttribute("href");
 
-      // dispara o handler do app.js se existir
       produto.dispatchEvent(new Event("change"));
     });
   </script>
