@@ -64,7 +64,7 @@ window.dados = [
   { produto: "ServiceDesk Plus Cloud", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus Cloud/ServiceDesk Plus Cloud - Enterprise.docx" },
 
   { produto: "ADManager Plus", edicao: "Standard", horas: 10, caminho: "ADManager Plus/ADManager Plus - Standard.docx" },
-  { produto: "ADManager Plus", edicao: "Professional", horas: 14, caminho: "ADManager Plus/ADManager Plus - Professional.docx" },
+  { produto: "ADManager Plus", edicao: "Professional", horas: 14, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Professional.docx" },
   { produto: "ADManager Plus", edicao: "Enterprise", horas: 16, caminho: "ADManager Plus/ADManager Plus - Enterprise.docx" },
 
   { produto: "ADSelfService Plus", edicao: "Standard", horas: 10, caminho: "ADSelfService Plus/ADSelfService Plus - Standard.docx" },
