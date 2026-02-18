@@ -11,7 +11,7 @@ if (!Array.isArray(window.dados)) {
 
 const dados = window.dados;
 
-const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantação/";
+const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantacao/";
 
 // lista produtos únicos
 const produtos = [...new Set(dados.map(d => d.produto))].sort();
