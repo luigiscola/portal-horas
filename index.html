@@ -1,40 +1,290 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horas de Implantação</title>
+
   <style>
-    body { font-family: Arial; margin: 40px; }
-    select { padding: 8px; margin: 10px 0; width: 300px; }
-    .resultado { 
-        margin-top: 20px; 
-        font-size: 20px; 
-        font-weight: bold;
-        color: #0b5ed7;
+    :root{
+      --bg: #0b1220;
+      --card: rgba(255,255,255,0.08);
+      --card-border: rgba(255,255,255,0.10);
+      --text: rgba(255,255,255,0.92);
+      --muted: rgba(255,255,255,0.70);
+      --accent: #2f7df6;
+      --accent-2: #1f63d6;
+      --danger: #ff5a5f;
+      --shadow: 0 18px 50px rgba(0,0,0,0.35);
+      --radius: 16px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      color: var(--text);
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(47,125,246,0.35), transparent 60%),
+                  radial-gradient(900px 500px at 100% 20%, rgba(76,201,240,0.20), transparent 55%),
+                  var(--bg);
+      min-height: 100vh;
+      padding: 32px 16px;
+    }
+
+    .wrap{
+      max-width: 980px;
+      margin: 0 auto;
+    }
+
+    .header{
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+
+    .title{
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: -0.3px;
+    }
+
+    .subtitle{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      padding: 18px;
+    }
+
+    .grid{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 12px;
+    }
+
+    @media (max-width: 720px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    .field label{
+      display: block;
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 8px;
+    }
+
+    select{
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.16);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      outline: none;
+      appearance: none;
+      transition: border-color .15s ease, transform .05s ease;
+    }
+
+    select:focus{
+      border-color: rgba(47,125,246,0.8);
+    }
+
+    select:disabled{
+      opacity: 0.55;
+      cursor: not-allowed;
+    }
+
+    /* seta do select */
+    .selectWrap{
+      position: relative;
+    }
+    .selectWrap::after{
+      content: "▾";
+      position: absolute;
+      right: 12px;
+      top: 50%;
+      transform: translateY(-50%);
+      pointer-events: none;
+      color: rgba(255,255,255,0.75);
+      font-size: 14px;
+    }
+
+    .resultBox{
+      margin-top: 16px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: rgba(255,255,255,0.05);
+      padding: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      min-height: 64px;
+    }
+
+    .resultado{
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      color: rgba(255,255,255,0.95);
+    }
+
+    .hint{
+      margin: 0;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .actions{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .btn{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: var(--text);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+      transition: transform .05s ease, background .15s ease, border-color .15s ease;
+      cursor: pointer;
+      user-select: none;
+      white-space: nowrap;
+    }
+
+    .btn:hover{
+      background: rgba(255,255,255,0.10);
+      border-color: rgba(255,255,255,0.20);
+    }
+
+    .btn:active{
+      transform: translateY(1px);
+    }
+
+    .btnPrimary{
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      border-color: rgba(47,125,246,0.65);
+    }
+    .btnPrimary:hover{
+      filter: brightness(1.04);
+    }
+
+    .pill{
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.06);
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .footer{
+      margin-top: 14px;
+      color: rgba(255,255,255,0.55);
+      font-size: 12px;
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
+  <div class="wrap">
+    <div class="header">
+      <div>
+        <h1 class="title">Consulta de Horas de Implantação</h1>
+        <p class="subtitle">
+          Selecione o produto e a edição para ver o esforço estimado e acessar o escopo correspondente.
+        </p>
+      </div>
+      <div class="pill">⏱️ Portal interno • Escopos</div>
+    </div>
 
-<h2>Consulta de Horas de Implantação</h2>
+    <div class="card">
+      <div class="grid">
+        <div class="field">
+          <label for="produto">Produto</label>
+          <div class="selectWrap">
+            <select id="produto">
+              <option value="">Selecione</option>
+            </select>
+          </div>
+        </div>
 
-<label>Produto:</label><br>
-<select id="produto">
-  <option value="">Selecione</option>
-</select>
+        <div class="field">
+          <label for="edicao">Edição</label>
+          <div class="selectWrap">
+            <select id="edicao" disabled>
+              <option value="">Selecione</option>
+            </select>
+          </div>
+        </div>
+      </div>
 
-<br>
+      <div class="resultBox">
+        <div>
+          <div class="resultado" id="resultado">Selecione um produto e uma edição.</div>
+          <p class="hint" id="hint">O botão de escopo aparecerá quando houver um arquivo cadastrado.</p>
+        </div>
 
-<label>Edição:</label><br>
-<select id="edicao" disabled>
-  <option value="">Selecione</option>
-</select>
+        <div class="actions">
+          <a id="linkEscopo" class="btn btnPrimary" target="_blank" rel="noopener" style="display:none;">
+            📄 Abrir escopo
+          </a>
+          <button id="btnLimpar" class="btn" type="button">↺ Limpar</button>
+        </div>
+      </div>
+    </div>
 
-<div class="resultado" id="resultado"></div>
-<a id="linkEscopo" target="_blank" rel="noopener" style="display:none; margin-top:10px; display:inline-block;"></a>
+    <div class="footer">Centric • ManageEngine • Portal de horas de implantação</div>
+  </div>
 
-<script src="dados.js"></script>
-<script src="app.js"></script>
+  <script src="dados.js"></script>
+  <script src="app.js"></script>
 
+  <script>
+    // Botão limpar (não depende do app.js)
+    document.getElementById("btnLimpar").addEventListener("click", () => {
+      const produto = document.getElementById("produto");
+      const edicao = document.getElementById("edicao");
+      const resultado = document.getElementById("resultado");
+      const hint = document.getElementById("hint");
+      const link = document.getElementById("linkEscopo");
+
+      produto.value = "";
+      edicao.innerHTML = '<option value="">Selecione</option>';
+      edicao.disabled = true;
+
+      resultado.textContent = "Selecione um produto e uma edição.";
+      hint.textContent = "O botão de escopo aparecerá quando houver um arquivo cadastrado.";
+      link.style.display = "none";
+      link.removeAttribute("href");
+
+      // dispara o handler do app.js se existir
+      produto.dispatchEvent(new Event("change"));
+    });
+  </script>
 </body>
 </html>
