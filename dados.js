@@ -2,7 +2,7 @@ const dados = [
   { produto: "Vulnerability Manager Plus", edicao: "Enterprise", horas: 10, caminho: "Vulnerability Manager Plus/Vulnerability Manager Plus - Enterprise.docx" },
   { produto: "Vulnerability Manager Plus", edicao: "Professional", horas: 8, caminho: "Vulnerability Manager Plus/Vulnerability Manager Plus - Professional.docx" },
 
-  { produto: "ADAudit Plus", edicao: "Professional", horas: 8, caminho: "Escopo_de_Implantação_-_ADAudit_Professional.docx" },
+  { produto: "ADAudit Plus", edicao: "Professional", horas: 8, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Professional.docx" },
   { produto: "ADAudit Plus", edicao: "Standard", horas: 8, caminho: "AD Audit Plus/ADAudit Plus - Standard.docx" },
 
   { produto: "Application Control Plus", edicao: "Professional", horas: 8, caminho: "Application Control Plus/Application Control Plus - Professional.docx" },
