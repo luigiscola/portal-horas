@@ -12,11 +12,9 @@ const dados = [
 
   { produto: "MDM Cloud", edicao: "Professional", horas: 12, caminho: "MDM Cloud/MDM Cloud - Professional.docx" },
   { produto: "MDM Cloud", edicao: "Standard", horas: 8, caminho: "MDM Cloud/MDM Cloud - Standard.docx" },
-  { produto: "MDM Cloud", edicao: "Enterprise", horas: 16, caminho: "MDM Cloud/MDM Cloud - Enterprise.docx" },
 
-  { produto: "MDM On-Premise", edicao: "Standard", horas: 8, caminho: "Mobile Device Manager Plus/Mobile Device Manager Plus - Standard.docx" },
-  { produto: "MDM On-Premise", edicao: "Professional", horas: 12, caminho: "Mobile Device Manager Plus/Mobile Device Manager Plus - Professional.docx" },
-  { produto: "MDM On-Premise", edicao: "Enterprise", horas: 16, caminho: "Mobile Device Manager Plus/Mobile Device Manager Plus - Enterprise.docx" },
+  { produto: "MDM On-Premise", edicao: "Standard", horas: 8, caminho: "MDM On-Premise/Mobile Device Manager Plus - Standard.docx" },
+  { produto: "MDM On-Premise", edicao: "Professional", horas: 12, caminho: "MDM On-Premise/Mobile Device Manager Plus - Professional.docx" },
 
   { produto: "Endpoint Central Plus On-Premise", edicao: "Enterprise", horas: 14, caminho: "Endpoint Central Plus On-Premise/Endpoint Central Plus On-Premise - Enterprise.docx" },
   { produto: "Endpoint Central Plus On-Premise", edicao: "Professional", horas: 12, caminho: "Endpoint Central Plus On-Premise/Endpoint Central Plus On-Premise - Professional.docx" },
