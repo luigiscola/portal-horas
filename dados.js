@@ -48,17 +48,17 @@ window.dados = [
   { produto: "Site24x7", edicao: "Professional", horas: 20, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - Professional Edition.docx" },
   { produto: "Site24x7", edicao: "MSP", horas: 26, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - MSP Edition.docx" },
 
-  { produto: "ServiceDesk Plus", edicao: "Standard", horas: 12, caminho: "ServiceDesk Plus/ServiceDesk Plus - Standard.docx" },
-  { produto: "ServiceDesk Plus", edicao: "Professional", horas: 18, caminho: "ServiceDesk Plus/ServiceDesk Plus - Professional.docx" },
-  { produto: "ServiceDesk Plus", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus/ServiceDesk Plus - Enterprise.docx" },
+  { produto: "ServiceDesk Plus", edicao: "Standard", horas: 12, caminho: "ServiceDesk Plus/Escopo de Implantação - SDP Standard.docx" },
+  { produto: "ServiceDesk Plus", edicao: "Professional", horas: 18, caminho: "ServiceDesk Plus/Escopo de Implantação - SDP Professional.docx" },
+  { produto: "ServiceDesk Plus", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus/Escopo de Implantação - SDP Enterprise.docx" },
 
-  { produto: "ServiceDesk Plus MSP", edicao: "Standard", horas: 12, caminho: "ServiceDesk Plus MSP/ServiceDesk Plus MSP - Standard.docx" },
-  { produto: "ServiceDesk Plus MSP", edicao: "Professional", horas: 18, caminho: "ServiceDesk Plus MSP/ServiceDesk Plus MSP - Professional.docx" },
-  { produto: "ServiceDesk Plus MSP", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus MSP/ServiceDesk Plus MSP - Enterprise.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "Standard", horas: 12, caminho: "Service Desk MSP/ServiceDesk Plus MSP - Standard.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "Professional", horas: 18, caminho: "Service Desk MSP/ServiceDesk Plus MSP - Professional.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "Enterprise", horas: 30, caminho: "Service Desk MSP/ServiceDesk Plus MSP - Enterprise.docx" },
 
-  { produto: "ServiceDesk Plus Cloud", edicao: "Standard", horas: 12, caminho: "ServiceDesk Plus Cloud/ServiceDesk Plus Cloud - Standard.docx" },
-  { produto: "ServiceDesk Plus Cloud", edicao: "Professional", horas: 18, caminho: "ServiceDesk Plus Cloud/ServiceDesk Plus Cloud - Professional.docx" },
-  { produto: "ServiceDesk Plus Cloud", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus Cloud/ServiceDesk Plus Cloud - Enterprise.docx" },
+  { produto: "ServiceDesk Plus Cloud", edicao: "Standard", horas: 12, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação SDP Cloud Standard.docx" },
+  { produto: "ServiceDesk Plus Cloud", edicao: "Professional", horas: 18, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação - SDP Cloud Professional.docx" },
+  { produto: "ServiceDesk Plus Cloud", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação - SDP Cloud Enterprise.docx" },
 
   { produto: "ADManager Plus", edicao: "Standard", horas: 10, caminho: "ADManager Plus/ADManager Plus - Standard.docx" },
   { produto: "ADManager Plus", edicao: "Professional", horas: 14, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Professional.docx" },
