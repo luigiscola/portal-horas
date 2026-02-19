@@ -60,14 +60,14 @@ window.dados = [
   { produto: "ServiceDesk Plus Cloud", edicao: "Professional", horas: 18, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação - SDP Cloud Professional.docx" },
   { produto: "ServiceDesk Plus Cloud", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação - SDP Cloud Enterprise.docx" },
 
-  { produto: "ADManager Plus", edicao: "Standard", horas: 10, caminho: "ADManager Plus/ADManager Plus - Standard.docx" },
+  { produto: "ADManager Plus", edicao: "Standard", horas: 10, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Standard.docx" },
   { produto: "ADManager Plus", edicao: "Professional", horas: 14, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Professional.docx" },
   
-  { produto: "ADSelfService Plus", edicao: "Standard", horas: 10, caminho: "ADSelfService Plus/ADSelfService Plus - Standard.docx" },
-  { produto: "ADSelfService Plus", edicao: "Professional", horas: 12, caminho: "ADSelfService Plus/ADSelfService Plus - Professional.docx" },
+  { produto: "ADSelfService Plus", edicao: "Standard", horas: 10, caminho: "ADSelfService Plus/Escopo_de_Implantação_-_ADSelfService_Standard.docx" },
+  { produto: "ADSelfService Plus", edicao: "Professional", horas: 12, caminho: "ADSelfService Plus/Escopo_de_Implantação_-_ADSelfService_Professional.docx" },
 
   { produto: "Analytics Plus", edicao: "Professional", horas: 14, caminho: "Analytics Plus/Analytics Plus - Professional.docx" },
   { produto: "Analytics Plus", edicao: "Enterprise", horas: 16, caminho: "Analytics Plus/Analytics Plus - Enterprise.docx" },
 
-  { produto: "GO-Global", edicao: "-", horas: 2, caminho: "GO-Global/GO-Global.docx" }
+  { produto: "GO-Global", edicao: "-", horas: 2, caminho: "Go-Global/Escopo-Implantação-GG.docx" }
 ];
