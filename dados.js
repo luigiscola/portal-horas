@@ -35,8 +35,8 @@ window.dados = [
   { produto: "OpManager", edicao: "Enterprise", horas: 20, caminho: "OpManager/OpManager - Enterprise.docx" },
 
   { produto: "OpManager Plus", edicao: "Standard", horas: 14, caminho: "OpManager Plus/OpManager Plus - Standard.docx" },
-  { produto: "OpManager Plus", edicao: "Professional", horas: 20, caminho: "OpManager Plus/OpManager Plus - Professional.docx" },
-  { produto: "OpManager Plus", edicao: "Enterprise", horas: 24, caminho: "OpManager Plus/OpManager Plus - Enterprise.docx" },
+  { produto: "OpManager Plus", edicao: "Professional", horas: 20, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Professional Edition-.docx" },
+  { produto: "OpManager Plus", edicao: "Enterprise", horas: 24, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Enterprise Edition.docx" },
   { produto: "OpManager Plus", edicao: "MSP", horas: 24, caminho: "OpManager Plus/OpManager Plus - MSP.docx" },
 
   { produto: "OpManager MSP", edicao: "-", horas: 20, caminho: "OpManager MSP/OpManager MSP - Professional.docx" },
