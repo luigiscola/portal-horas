@@ -5,7 +5,7 @@ window.dados = [
   { produto: "ADAudit Plus", edicao: "Professional", horas: 8, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Professional.docx" },
   { produto: "ADAudit Plus", edicao: "Standard", horas: 8, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Standard.docx" },
 
-  { produto: "Application Control Plus", edicao: "Professional", horas: 8, caminho: "Application Control Plus/Application Control Plus - Professional.docx" },
+  { produto: "Application Control Plus", edicao: "Professional", horas: 8, caminho: "Application Control/Application Control Plus - Professional.docx" },
   { produto: "DeviceControl Plus", edicao: "Professional", horas: 8, caminho: "Device Control Plus/DeviceControl Plus - Professional.docx" },
   { produto: "Endpoint DLP Plus", edicao: "Professional", horas: 10, caminho: "Data Loss Prevetion/Endpoint Data Loss Prevention Plus - Professional.docx" },
   { produto: "Browser Security Plus", edicao: "Professional", horas: 8, caminho: "Browser Security Plus/Browser Security Plus - Professional.docx" },
@@ -30,14 +30,12 @@ window.dados = [
   { produto: "Endpoint Central MSP", edicao: "Cloud Professional", horas: 14, caminho: "Endpoint Central MSP/Endpoint Central MSP Cloud - Professional.docx" },
   { produto: "Endpoint Central MSP", edicao: "On-Premise Enterprise", horas: 16, caminho: "Endpoint Central MSP/Endpoint Central MSP On-Prem - Enterprise.docx" },
 
-  { produto: "OpManager", edicao: "Standard", horas: 10, caminho: "OpManager/OpManager - Standard.docx" },
-  { produto: "OpManager", edicao: "Professional", horas: 16, caminho: "OpManager/OpManager - Professional.docx" },
-  { produto: "OpManager", edicao: "Enterprise", horas: 20, caminho: "OpManager/OpManager - Enterprise.docx" },
-
-  { produto: "OpManager Plus", edicao: "Standard", horas: 14, caminho: "OpManager Plus/OpManager Plus - Standard.docx" },
+  { produto: "OpManager", edicao: "Standard", horas: 14, caminho: "OpManager Plus/OpManager Plus - Standard.docx" },
+  { produto: "OpManager", edicao: "Professional", horas: 14, caminho: "OpManager Plus/OpManager Plus - Standard.docx" },
+  { produto: "OpManager", edicao: "Enterprise", horas: 14, caminho: "OpManager Plus/OpManager Plus - Standard.docx" },
+  
   { produto: "OpManager Plus", edicao: "Professional", horas: 20, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Professional Edition-.docx" },
   { produto: "OpManager Plus", edicao: "Enterprise", horas: 24, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Enterprise Edition.docx" },
-  { produto: "OpManager Plus", edicao: "MSP", horas: 24, caminho: "OpManager Plus/OpManager Plus - MSP.docx" },
 
   { produto: "OpManager MSP", edicao: "-", horas: 20, caminho: "OpManager MSP/OpManager MSP - Professional.docx" },
 
