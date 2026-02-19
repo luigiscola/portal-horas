@@ -6,8 +6,8 @@ window.dados = [
   { produto: "ADAudit Plus", edicao: "Standard", horas: 8, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Standard.docx" },
 
   { produto: "Application Control Plus", edicao: "Professional", horas: 8, caminho: "Application Control Plus/Application Control Plus - Professional.docx" },
-  { produto: "DeviceControl Plus", edicao: "Professional", horas: 8, caminho: "DeviceControl Plus/DeviceControl Plus - Professional.docx" },
-  { produto: "Endpoint DLP Plus", edicao: "Professional", horas: 10, caminho: "Endpoint DLP Plus/Endpoint DLP Plus - Professional.docx" },
+  { produto: "DeviceControl Plus", edicao: "Professional", horas: 8, caminho: "Device Control Plus/DeviceControl Plus - Professional.docx" },
+  { produto: "Endpoint DLP Plus", edicao: "Professional", horas: 10, caminho: "Data Loss Prevetion/Endpoint Data Loss Prevention Plus - Professional.docx" },
   { produto: "Browser Security Plus", edicao: "Professional", horas: 8, caminho: "Browser Security Plus/Browser Security Plus - Professional.docx" },
 
   { produto: "MDM Cloud", edicao: "Professional", horas: 12, caminho: "MDM Cloud/MDM Cloud - Professional.docx" },
