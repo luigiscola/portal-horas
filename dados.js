@@ -50,9 +50,12 @@ window.dados = [
   { produto: "ServiceDesk Plus", edicao: "Professional", horas: 18, caminho: "ServiceDesk Plus/Escopo de Implantação - SDP Professional.docx" },
   { produto: "ServiceDesk Plus", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus/Escopo de Implantação - SDP Enterprise.docx" },
 
-  { produto: "ServiceDesk Plus MSP", edicao: "Standard", horas: 12, caminho: "Service Desk MSP/ServiceDesk Plus MSP - Standard.docx" },
-  { produto: "ServiceDesk Plus MSP", edicao: "Professional", horas: 18, caminho: "Service Desk MSP/ServiceDesk Plus MSP - Professional.docx" },
-  { produto: "ServiceDesk Plus MSP", edicao: "Enterprise", horas: 30, caminho: "Service Desk MSP/ServiceDesk Plus MSP - Enterprise.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "On-Premise Standard", horas: 12, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Standard.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "On-Premise Professional", horas: 18, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Professional.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "On-Premise Enterprise", horas: 30, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Enterprise.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "Cloud Standard", horas: 12, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Cloud Standard.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "Cloud Professional", horas: 18, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Cloud Professional.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "Cloud Enterprise", horas: 30, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Cloud Enterprise.docx" },
 
   { produto: "ServiceDesk Plus Cloud", edicao: "Standard", horas: 12, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação SDP Cloud Standard.docx" },
   { produto: "ServiceDesk Plus Cloud", edicao: "Professional", horas: 18, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação - SDP Cloud Professional.docx" },
