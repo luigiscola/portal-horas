@@ -23,7 +23,7 @@ window.dados = [
 
   { produto: "Endpoint Central On-Premise", edicao: "Enterprise", horas: 14, caminho: "Endpoint Central On-Premise/Endpoint Central On-Premise - Enterprise.docx" },
   { produto: "Endpoint Central On-Premise", edicao: "Professional", horas: 12, caminho: "Endpoint Central On-Premise/Endpoint Central On-Premise - Professional.docx" },
-  { produto: "Endpoint Central On-Premise", edicao: "UEM", horas: 16, caminho: "Endpoint Central On-Premise/Endpoint Central Plus Cloud - UEM.docx" },
+  { produto: "Endpoint Central On-Premise", edicao: "UEM", horas: 16, caminho: "Endpoint Central On-Premise/Endpoint Central On-Premise - UEM.docx" },
   { produto: "Endpoint Central On-Premise", edicao: "Security", horas: 24, caminho: "Endpoint Central On-Premise/Endpoint Central On-Premise - Security.docx" },
 
   { produto: "Endpoint Central MSP", edicao: "Cloud Enterprise", horas: 16, caminho: "Endpoint Central MSP/Endpoint Central MSP Cloud - Enterprise.docx" },
