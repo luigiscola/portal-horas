@@ -13,8 +13,8 @@ window.dados = [
   { produto: "MDM Cloud", edicao: "Professional", horas: 12, caminho: "MDM Cloud/MDM Cloud - Professional.docx" },
   { produto: "MDM Cloud", edicao: "Standard", horas: 8, caminho: "MDM Cloud/MDM Cloud - Standard.docx" },
 
-  { produto: "MDM On-Premise", edicao: "Standard", horas: 8, caminho: "MDM On-Premise/Mobile Device Manager Plus - Standard.docx" },
-  { produto: "MDM On-Premise", edicao: "Professional", horas: 12, caminho: "MDM On-Premise/Mobile Device Manager Plus - Professional.docx" },
+  { produto: "MDM On-Premise", edicao: "Standard", horas: 8, caminho: "MDM On-Premise/MDM Plus On-Prem Standard.docx" },
+  { produto: "MDM On-Premise", edicao: "Professional", horas: 12, caminho: "MDM On-Premise/MDM Plus On-Prem Professional.docx" },
 
   { produto: "Endpoint Central Cloud", edicao: "Enterprise", horas: 14, caminho: "Endpoint Central Cloud/Endpoint Central Plus Cloud - Enterprise.docx" },
   { produto: "Endpoint Central Cloud", edicao: "Professional", horas: 12, caminho: "Endpoint Central Cloud/Endpoint Central Plus Cloud - Professional.docx" },
