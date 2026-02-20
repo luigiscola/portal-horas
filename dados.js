@@ -30,17 +30,16 @@ window.dados = [
   { produto: "Endpoint Central MSP", edicao: "Cloud Professional", horas: 14, caminho: "Endpoint Central MSP/Endpoint Central MSP Cloud - Professional.docx" },
   { produto: "Endpoint Central MSP", edicao: "On-Premise Enterprise", horas: 16, caminho: "Endpoint Central MSP/Endpoint Central MSP On-Prem - Enterprise.docx" },
 
-  { produto: "OpManager", edicao: "Standard", horas: 14, caminho: "OpManager Plus/OpManager Plus - Standard.docx" },
-  { produto: "OpManager", edicao: "Professional", horas: 14, caminho: "OpManager Plus/OpManager Plus - Standard.docx" },
+  { produto: "OpManager", edicao: "Professional", horas: 14, caminho: "OpManager Plus/Escopo de Implantação - OPManager - Professional Edition.docx" },
   { produto: "OpManager", edicao: "Enterprise", horas: 14, caminho: "OpManager Plus/OpManager Plus - Standard.docx" },
   
   { produto: "OpManager Plus", edicao: "Professional", horas: 20, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Professional Edition-.docx" },
-  { produto: "OpManager Plus", edicao: "Enterprise", horas: 24, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Enterprise Edition.docx" },
+  { produto: "OpManager Plus", edicao: "Enterprise", horas: 24, caminho: "OpManager Plus/Escopo de Implantação - OPManager- Enterprise Edition_.docx" },
 
-  { produto: "OpManager MSP", edicao: "-", horas: 20, caminho: "OpManager MSP/OpManager MSP - Professional.docx" },
+  { produto: "OpManager MSP", edicao: "-", horas: 20, caminho: "OpManager MSP/Escopo de Implantação - OPManager - MSP Edition_.docx" },
 
   { produto: "Applications Manager", edicao: "Professional", horas: 14, caminho: "Applications Manager/Applications Manager - Professional.docx" },
-  { produto: "Applications Manager", edicao: "Enterprise", horas: 16, caminho: "Applications Manager/Applications Manager - Enterprise.docx" },
+  { produto: "Applications Manager", edicao: "Enterprise", horas: 16, caminho: "Applications Manager/Escopo de Implantação - Application Manager - Enterprise Edition.docx" },
 
   { produto: "Site24x7", edicao: "Elite", horas: 24, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - Elite Edition.docx" },
   { produto: "Site24x7", edicao: "Professional", horas: 20, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - Professional Edition.docx" },
