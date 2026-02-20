@@ -74,6 +74,6 @@ window.dados = [
   { produto: "PasswordManager Pro", edicao: "-", horas: 2, caminho: "" },
   { produto: "PasswordManager Pro MSP", edicao: "-", horas: 2, caminho: "" },
   { produto: "PAM 360", edicao: "-", horas: 2, caminho: "" },
-  { produto: "PAM 360 MSP", edicao: "-", horas: 2, caminho: "" }
-
+  { produto: "PAM 360 MSP", edicao: "-", horas: 2, caminho: "" },
+  { produto: "KeyManager Plus", edicao: "-", horas: 2, caminho: "" },
 ];
