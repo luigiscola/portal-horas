@@ -30,8 +30,8 @@ window.dados = [
   { produto: "Endpoint Central MSP", edicao: "Cloud Professional", horas: 14, caminho: "Endpoint Central MSP/Endpoint Central MSP Cloud - Professional.docx" },
   { produto: "Endpoint Central MSP", edicao: "On-Premise Enterprise", horas: 16, caminho: "Endpoint Central MSP/Endpoint Central MSP On-Prem - Enterprise.docx" },
 
-  { produto: "OpManager", edicao: "Professional", horas: 14, caminho: "OpManager Plus/Escopo de Implantação - OPManager - Professional Edition.docx" },
-  { produto: "OpManager", edicao: "Enterprise", horas: 14, caminho: "OpManager Plus/Escopo de Implantação - OPManager- Enterprise Edition_.docx" },
+  { produto: "OpManager", edicao: "Professional", horas: 14, caminho: "OpManager/Escopo de Implantação - OPManager - Professional Edition.docx" },
+  { produto: "OpManager", edicao: "Enterprise", horas: 14, caminho: "OpManager/Escopo de Implantação - OPManager- Enterprise Edition_.docx" },
   
   { produto: "OpManager Plus", edicao: "Professional", horas: 20, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Professional Edition-.docx" },
   { produto: "OpManager Plus", edicao: "Enterprise", horas: 24, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Enterprise Edition.docx" },
