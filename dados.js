@@ -31,10 +31,10 @@ window.dados = [
   { produto: "Endpoint Central MSP", edicao: "On-Premise Enterprise", horas: 16, caminho: "Endpoint Central MSP/Endpoint Central MSP On-Prem - Enterprise.docx" },
 
   { produto: "OpManager", edicao: "Professional", horas: 14, caminho: "OpManager Plus/Escopo de Implantação - OPManager - Professional Edition.docx" },
-  { produto: "OpManager", edicao: "Enterprise", horas: 14, caminho: "OpManager Plus/OpManager Plus - Standard.docx" },
+  { produto: "OpManager", edicao: "Enterprise", horas: 14, caminho: "OpManager Plus/Escopo de Implantação - OPManager- Enterprise Edition_.docx" },
   
   { produto: "OpManager Plus", edicao: "Professional", horas: 20, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Professional Edition-.docx" },
-  { produto: "OpManager Plus", edicao: "Enterprise", horas: 24, caminho: "OpManager Plus/Escopo de Implantação - OPManager- Enterprise Edition_.docx" },
+  { produto: "OpManager Plus", edicao: "Enterprise", horas: 24, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Enterprise Edition.docx" },
 
   { produto: "OpManager MSP", edicao: "-", horas: 20, caminho: "OpManager MSP/Escopo de Implantação - OPManager - MSP Edition_.docx" },
 
@@ -69,5 +69,11 @@ window.dados = [
   { produto: "Analytics Plus", edicao: "Professional", horas: 14, caminho: "Analytics Plus/Analytics Plus - Professional.docx" },
   { produto: "Analytics Plus", edicao: "Enterprise", horas: 16, caminho: "Analytics Plus/Analytics Plus - Enterprise.docx" },
 
-  { produto: "GO-Global", edicao: "-", horas: 2, caminho: "Go-Global/Escopo-Implantação-GG.docx" }
+  { produto: "GO-Global", edicao: "-", horas: 2, caminho: "Go-Global/Escopo-Implantação-GG.docx" },
+
+  { produto: "PasswordManager Pro", edicao: "-", horas: 2, caminho: "" },
+  { produto: "PasswordManager Pro MSP", edicao: "-", horas: 2, caminho: "" },
+  { produto: "PAM 360", edicao: "-", horas: 2, caminho: "" },
+  { produto: "PAM 360 MSP", edicao: "-", horas: 2, caminho: "" }
+
 ];
