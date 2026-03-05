@@ -106,4 +106,9 @@ window.dados = [
 
   { produto: "Recovery Manager Plus", edicao: "Standard", horas: 14, caminho: "Recovery Manager Plus/Escopo_de_Implantação_-_RecoveryManagerPlus_Standard.docx" },
 
+  { produto: "Data Security Plus", edicao: "-", horas: 14, caminho: "" },
+
+  
+
+
 ];
