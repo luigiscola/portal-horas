@@ -69,8 +69,8 @@ window.dados = [
   { produto: "ADSelfService Plus", edicao: "Standard", horas: 14, caminho: "ADSelfService Plus/Escopo_de_Implantação_-_ADSelfService_Standard.docx" },
   { produto: "ADSelfService Plus", edicao: "Professional", horas: 14, caminho: "ADSelfService Plus/Escopo_de_Implantação_-_ADSelfService_Professional.docx" },
 
-  { produto: "Analytics Plus", edicao: "Professional", horas: 14, caminho: "Analytics Plus/Analytics Plus - Professional.docx" },
-  { produto: "Analytics Plus", edicao: "Enterprise", horas: 16, caminho: "Analytics Plus/Analytics Plus - Enterprise.docx" },
+  { produto: "Analytics Plus", edicao: "Professional", horas: 14, caminho: "" },
+  { produto: "Analytics Plus", edicao: "Enterprise", horas: 16, caminho: "" },
 
   { produto: "Asset Explorer", edicao: "-", horas: 10, caminho: "Asset Explorer/Escopo de Implantação - AssetExplorer.docx" },
   { produto: "Asset Explorer Cloud", edicao: "-", horas: 10, caminho: "Asset Explorer Cloud/Escopo de Implantação - AssetExplorer Cloud.docx" },
@@ -107,8 +107,15 @@ window.dados = [
   { produto: "Recovery Manager Plus", edicao: "Standard", horas: 14, caminho: "Recovery Manager Plus/Escopo_de_Implantação_-_RecoveryManagerPlus_Standard.docx" },
 
   { produto: "Data Security Plus", edicao: "-", horas: 14, caminho: "" },
-
+  { produto: "EventLog Analyzer", edicao: "-", horas: 14, caminho: "" },
+  { produto: "Identity360", edicao: "-", horas: 14, caminho: "" },
+  { produto: "Log360", edicao: "-", horas: 14, caminho: "" },
+  { produto: "Log360 MSP", edicao: "-", horas: 14, caminho: "" },
+  { produto: "Log360 Cloud", edicao: "-", horas: 14, caminho: "" },
+  { produto: "OpUtils", edicao: "-", horas: 14, caminho: "" },
+  { produto: "Remote Access", edicao: "-", horas: 14, caminho: "" },
+  { produto: "SaaS Manager Plus", edicao: "-", horas: 14, caminho: "" },
+  { produto: "Sharepoint Manager Plus", edicao: "-", horas: 14, caminho: "" },
+  { produto: "SupportCenter Plus", edicao: "-", horas: 14, caminho: "" },
   
-
-
 ];
