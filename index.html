@@ -224,6 +224,19 @@
       font-size: 12px;
       text-align: center;
     }
+    
+    .escopo-aviso{
+      margin-top: 10px;
+      text-align: center;
+      color: var(--danger);
+      font-size: 14px;
+      font-weight: 500;
+      padding: 8px 10px;
+      border-radius: 10px;
+      background: rgba(255, 90, 95, 0.08);
+      border: 1px solid rgba(255, 90, 95, 0.20);
+      display: none; /* começa oculto */
+    }
   </style>
 </head>
 
@@ -270,7 +283,10 @@
             📄 Abrir escopo
           </a>
           <button id="btnLimpar" class="btn" type="button">↺ Limpar</button>
-        </div>
+        </div>        
+        <div id="escopoAviso" class="escopo-aviso">
+          Caso o Escopo não esteja disponível por favor entrar em contato com o Time Técnico
+        </div>        
       </div>
     </div>
 
