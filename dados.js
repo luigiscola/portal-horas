@@ -106,16 +106,16 @@ window.dados = [
 
   { produto: "Recovery Manager Plus", edicao: "Standard", horas: 14, caminho: "Recovery Manager Plus/Escopo_de_Implantação_-_RecoveryManagerPlus_Standard.docx" },
 
-  { produto: "Data Security Plus", edicao: "-", horas: 14, caminho: "" },
-  { produto: "EventLog Analyzer", edicao: "-", horas: 14, caminho: "" },
-  { produto: "Identity360", edicao: "-", horas: 14, caminho: "" },
-  { produto: "Log360", edicao: "-", horas: 14, caminho: "" },
-  { produto: "Log360 MSP", edicao: "-", horas: 14, caminho: "" },
-  { produto: "Log360 Cloud", edicao: "-", horas: 14, caminho: "" },
-  { produto: "OpUtils", edicao: "-", horas: 14, caminho: "" },
-  { produto: "Remote Access", edicao: "-", horas: 14, caminho: "" },
-  { produto: "SaaS Manager Plus", edicao: "-", horas: 14, caminho: "" },
-  { produto: "Sharepoint Manager Plus", edicao: "-", horas: 14, caminho: "" },
-  { produto: "SupportCenter Plus", edicao: "-", horas: 14, caminho: "" },
+  { produto: "Data Security Plus", edicao: "-", horas: 0, caminho: "" },
+  { produto: "EventLog Analyzer", edicao: "-", horas: 0, caminho: "" },
+  { produto: "Identity360", edicao: "-", horas: 0, caminho: "" },
+  { produto: "Log360", edicao: "-", horas: 0, caminho: "" },
+  { produto: "Log360 MSP", edicao: "-", horas: 0, caminho: "" },
+  { produto: "Log360 Cloud", edicao: "-", horas: 0, caminho: "" },
+  { produto: "OpUtils", edicao: "-", horas: 0, caminho: "" },
+  { produto: "Remote Access", edicao: "-", horas: 0, caminho: "" },
+  { produto: "SaaS Manager Plus", edicao: "-", horas: 0, caminho: "" },
+  { produto: "Sharepoint Manager Plus", edicao: "-", horas: 0, caminho: "" },
+  { produto: "SupportCenter Plus", edicao: "-", horas: 0, caminho: "" },
   
 ];
