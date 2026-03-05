@@ -306,127 +306,151 @@
   <script src="dados.js?v=20260218-2"></script>
 
   <!-- 2) App inline com MutationObserver (pode mover para app.js se preferir) -->
-  <script>
-    const produtoSelect = document.getElementById("produto");
-    const edicaoSelect  = document.getElementById("edicao");
-    const resultado     = document.getElementById("resultado");
-    const linkEscopo    = document.getElementById("linkEscopo");
+<script>
+  const produtoSelect = document.getElementById("produto");
+  const edicaoSelect  = document.getElementById("edicao");
+  const resultado     = document.getElementById("resultado");
+  const linkEscopo    = document.getElementById("linkEscopo");
 
-    // Base SharePoint (Implantação já URL-encoded)
-    const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantacao/";
+  // Base SharePoint (Implantação já URL-encoded)
+  const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantacao/";
 
-    // ---------- Aviso: mostrar/ocultar conforme href do link ----------
-    function atualizarAvisoEscopo() {
-      const aviso = document.getElementById("escopoAviso");
-      if (!aviso) return;
+  // ----- Aviso: só considera quando produto & edição estiverem selecionados -----
+  function atualizarAvisoEscopo() {
+    const aviso = document.getElementById("escopoAviso");
+    if (!aviso) return;
 
-      const href = (linkEscopo?.getAttribute("href") || "").trim();
-      const visivel = linkEscopo && linkEscopo.style.display !== "none";
+    const produtoSelecionado = !!produtoSelect.value;
+    const edicaoSelecionada  = !!edicaoSelect.value;
 
-      if (!href || !visivel) {
-        aviso.style.display = "block";
-      } else {
-        aviso.style.display = "none";
-      }
+    // Enquanto não houver produto + edição, não mostra o aviso
+    if (!produtoSelecionado || !edicaoSelecionada) {
+      aviso.style.display = "none";
+      return;
     }
 
-    // Observa mudanças no botão feitas pelo script (href/estilo/classe)
-    const _obs = new MutationObserver(atualizarAvisoEscopo);
-    _obs.observe(linkEscopo, { attributes: true, attributeFilter: ["href", "style", "class"] });
+    // A partir daqui, aplica a regra do href/visibilidade do botão
+    const href = (linkEscopo?.getAttribute("href") || "").trim();
+    const visivel = linkEscopo && linkEscopo.style.display !== "none";
 
-    // ---------- Validação de dados ----------
-    if (!Array.isArray(window.dados)) {
-      console.error("dados.js não carregou ou não definiu 'window.dados'.");
-      if (resultado) {
-        resultado.textContent = "Erro ao carregar dados. Tente Ctrl+F5 (Windows) / Cmd+Shift+R (Mac).";
-      }
-      throw new Error("window.dados undefined");
+    if (!href || !visivel) {
+      aviso.style.display = "block";
+    } else {
+      aviso.style.display = "none";
     }
-    const dados = window.dados;
+  }
 
-    // ---------- Popular Produtos ----------
-    const produtos = [...new Set(dados.map(d => d.produto))].sort();
-    produtos.forEach(p => {
-      const opt = document.createElement("option");
-      opt.value = opt.textContent = p;
-      produtoSelect.appendChild(opt);
-    });
+  // Observa mudanças no botão feitas pelo script (href/estilo/classe)
+  const _obs = new MutationObserver(atualizarAvisoEscopo);
+  _obs.observe(linkEscopo, { attributes: true, attributeFilter: ["href", "style", "class"] });
 
-    // ---------- Helpers para o link ----------
-    function esconderLink() {
-      linkEscopo.style.display = "none";
-      linkEscopo.removeAttribute("href");
-      linkEscopo.textContent = "";
-      atualizarAvisoEscopo();
+  // ---------- Validação de dados ----------
+  if (!Array.isArray(window.dados)) {
+    console.error("dados.js não carregou ou não definiu 'window.dados'.");
+    if (resultado) {
+      resultado.textContent = "Erro ao carregar dados. Tente Ctrl+F5 (Windows) / Cmd+Shift+R (Mac).";
     }
+    throw new Error("window.dados undefined");
+  }
+  const dados = window.dados;
 
-    function mostrarLink(caminho) {
-      const url = BASE_SP + encodeURIComponent(caminho).replace(/%2F/g, "/");
-      linkEscopo.href = url;
-      linkEscopo.textContent = "📄 Abrir escopo";
-      linkEscopo.style.display = "inline-block";
-      atualizarAvisoEscopo();
-    }
+  // ---------- Popular Produtos ----------
+  const produtos = [...new Set(dados.map(d => d.produto))].sort();
+  produtos.forEach(p => {
+    const opt = document.createElement("option");
+    opt.value = opt.textContent = p;
+    produtoSelect.appendChild(opt);
+  });
 
-    // ---------- Eventos ----------
-    produtoSelect.addEventListener("change", () => {
-      const produto = produtoSelect.value;
-
-      edicaoSelect.innerHTML = '<option value="">Selecione</option>';
-      resultado.textContent = "";
-      esconderLink();
-
-      if (!produto) {
-        edicaoSelect.disabled = true;
-        return;
-      }
-
-      const edicoes = dados
-        .filter(d => d.produto === produto)
-        .map(d => d.edicao);
-
-      [...new Set(edicoes)].sort().forEach(ed => {
-        const opt = document.createElement("option");
-        opt.value = opt.textContent = ed;
-        edicaoSelect.appendChild(opt);
-      });
-
-      edicaoSelect.disabled = false;
-    });
-
-    edicaoSelect.addEventListener("change", () => {
-      const produto = produtoSelect.value;
-      const edicao  = edicaoSelect.value;
-
-      resultado.textContent = "";
-      esconderLink();
-
-      const item = dados.find(d => d.produto === produto && d.edicao === edicao);
-      if (!item) return;
-
-      resultado.textContent = `⏱️ ${item.horas} horas de implantação`;
-
-      if (item.caminho) {
-        mostrarLink(item.caminho);
-      }
-    });
-
-    // ---------- Botão Limpar ----------
-    document.getElementById("btnLimpar").addEventListener("click", () => {
-      produtoSelect.value = "";
-      edicaoSelect.innerHTML = '<option value="">Selecione</option>';
-      edicaoSelect.disabled = true;
-
-      resultado.textContent = "Selecione um produto e uma edição.";
-      esconderLink();
-
-      // dispara change para manter fluxo padrão
-      produtoSelect.dispatchEvent(new Event("change"));
-    });
-
-    // Estado inicial do aviso
+  // ---------- Helpers para o link ----------
+  function esconderLink() {
+    linkEscopo.style.display = "none";
+    linkEscopo.removeAttribute("href");
+    linkEscopo.textContent = "";
     atualizarAvisoEscopo();
-  </script>
+  }
+
+  function mostrarLink(caminho) {
+    const url = BASE_SP + encodeURIComponent(caminho).replace(/%2F/g, "/");
+    linkEscopo.href = url;
+    linkEscopo.textContent = "📄 Abrir escopo";
+    linkEscopo.style.display = "inline-block";
+    atualizarAvisoEscopo();
+  }
+
+  // ---------- Eventos ----------
+  produtoSelect.addEventListener("change", () => {
+    const produto = produtoSelect.value;
+
+    edicaoSelect.innerHTML = '<option value="">Selecione</option>';
+    resultado.textContent = "";
+    esconderLink(); // também oculta o aviso
+
+    if (!produto) {
+      edicaoSelect.disabled = true;
+      // Sem produto + edição -> manter aviso oculto
+      atualizarAvisoEscopo();
+      return;
+    }
+
+    const edicoes = dados
+      .filter(d => d.produto === produto)
+      .map(d => d.edicao);
+
+    [...new Set(edicoes)].sort().forEach(ed => {
+      const opt = document.createElement("option");
+      opt.value = opt.textContent = ed;
+      edicaoSelect.appendChild(opt);
+    });
+
+    edicaoSelect.disabled = false;
+    // Ainda não há edição selecionada -> manter aviso oculto
+    atualizarAvisoEscopo();
+  });
+
+  edicaoSelect.addEventListener("change", () => {
+    const produto = produtoSelect.value;
+    const edicao  = edicaoSelect.value;
+
+    resultado.textContent = "";
+    esconderLink(); // também oculta o aviso
+
+    const item = dados.find(d => d.produto === produto && d.edicao === edicao);
+    if (!item) {
+      // Produto + edição selecionados, mas sem item (dados) -> mostra aviso
+      atualizarAvisoEscopo();
+      return;
+    }
+
+    resultado.textContent = `⏱️ ${item.horas} horas de implantação`;
+
+    if (item.caminho) {
+      mostrarLink(item.caminho);
+    } else {
+      // Sem caminho: produto+edição estão preenchidos -> exibe aviso
+      atualizarAvisoEscopo();
+    }
+  });
+
+  // ---------- Botão Limpar ----------
+  document.getElementById("btnLimpar").addEventListener("click", () => {
+    produtoSelect.value = "";
+    edicaoSelect.innerHTML = '<option value="">Selecione</option>';
+    edicaoSelect.disabled = true;
+
+    resultado.textContent = "Selecione um produto e uma edição.";
+    esconderLink(); // oculta aviso e botão
+
+    // dispara change para manter fluxo padrão
+    produtoSelect.dispatchEvent(new Event("change"));
+    // Por segurança, força ocultar o aviso no estado inicial
+    document.getElementById("escopoAviso").style.display = "none";
+  });
+
+  // Estado inicial: garantir aviso oculto
+  document.getElementById("escopoAviso").style.display = "none";
+  atualizarAvisoEscopo();
+</script>
 </body>
 </html>
 ``
