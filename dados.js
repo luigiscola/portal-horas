@@ -69,6 +69,9 @@ window.dados = [
   { produto: "Analytics Plus", edicao: "Professional", horas: 14, caminho: "Analytics Plus/Analytics Plus - Professional.docx" },
   { produto: "Analytics Plus", edicao: "Enterprise", horas: 16, caminho: "Analytics Plus/Analytics Plus - Enterprise.docx" },
 
+  { produto: "Asset Explorer", edicao: "-", horas: 14, caminho: "Asset Explorer/Escopo de Implantação - AssetExplorer.docx" },
+  { produto: "Asset Explorer Cloud", edicao: "-", horas: 16, caminho: "Asset Explorer Cloud/Escopo de Implantação - AssetExplorer Cloud.docx" },
+
   { produto: "GO-Global", edicao: "-", horas: 2, caminho: "Go-Global/Escopo-Implantação-GG.docx" },
 
   { produto: "PasswordManager Pro", edicao: "-", horas: 12, caminho: "PasswordManager Pro/Escopo de Implantação - PMP.docx" },
@@ -76,4 +79,28 @@ window.dados = [
   { produto: "PAM 360", edicao: "-", horas: 16, caminho: "PAM 360/Escopo de Implantação - PAM360.docx" },
   { produto: "PAM 360 MSP", edicao: "-", horas: 16, caminho: "PAM 360 MSP/Escopo de Implantação - PAM360 - MSP.docx" },
   { produto: "KeyManager Plus", edicao: "-", horas: 6, caminho: "Key Manager Plus/Escopo de Implantação - Key Manager Plus.docx" },
+
+  { produto: "Data Loss Prevetion", edicao: "-", horas: 6, caminho: "Data Loss Prevetion/Endpoint DLP Plus - Professional.docx" },
+
+  { produto: "Firewall Analyzer", edicao: "-", horas: 6, caminho: "Firewall Analyzer/Escopo de Implantação - Firewall Analyzer - Professional Edition1.docx" },
+
+  { produto: "M365 Management", edicao: "Standard", horas: 6, caminho: "M365 Management/Escopo_de_Implantação_-_M365MP_Standard.docx" },
+  { produto: "M365 Management", edicao: "Professional", horas: 6, caminho: "M365 Management/Escopo_de_Implantação_-_M365MP_Professional.docx" },
+
+  { produto: "Mobile Device Management Plus MSP", edicao: "On-Premise Standard", horas: 12, caminho: "Mobile Device Management Plus MSP/MDM MSP On-Prem - Standard.docx" },
+  { produto: "Mobile Device Management Plus MSP", edicao: "On-Premise Professional", horas: 18, caminho: "Mobile Device Management Plus MSP/MDM MSP On-Prem - Professional.docx" },
+  { produto: "Mobile Device Management Plus MSP", edicao: "Cloud Standard", horas: 30, caminho: "Mobile Device Management Plus MSP/MDM MSP Cloud - Standard.docx" },
+  { produto: "Mobile Device Management Plus MSP", edicao: "Cloud Professional", horas: 12, caminho: "Mobile Device Management Plus MSP/MDM MSP Cloud - Professional.docx" },
+  
+  { produto: "NetFlow Analyzer", edicao: "-", horas: 12, caminho: "NetFlow Analyzer/Escopo de Implantação - Netflow Analyzer - Professional Edition.docx" },
+
+  { produto: "Network Configuration Manager", edicao: "-", horas: 12, caminho: "Network Configuration Manager/Escopo de Implantação - NCM - Professional Edition - Copia.docx" },
+
+  { produto: "Patch Manager Plus On-Premise", edicao: "Professional", horas: 12, caminho: "Patch Manager Plus/Patch Manager Plus On-Prem Professional.docx" },
+  { produto: "Patch Manager Plus On-Premise", edicao: "Enterprise", horas: 18, caminho: "Patch Manager Plus/Patch Manager Plus On-Prem Enterprise .docx" },
+  { produto: "Patch Manager Plus Cloud", edicao: "Professional", horas: 30, caminho: "Patch Manager Plus Cloud/Patch Manager Plus Cloud Professional.docx" },
+  { produto: "Patch Manager Plus Cloud", edicao: "Enterprise", horas: 12, caminho: "Patch Manager Plus Cloud/Patch Manager Plus Cloud Enterprise .docx" },
+
+  { produto: "Recovery Manager Plus", edicao: "-", horas: 12, caminho: "Recovery Manager Plus/Escopo_de_Implantação_-_RecoveryManagerPlus_Standard.docx" },
+
 ];
