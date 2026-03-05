@@ -80,8 +80,6 @@ window.dados = [
   { produto: "PAM 360 MSP", edicao: "-", horas: 16, caminho: "PAM 360 MSP/Escopo de Implantação - PAM360 - MSP.docx" },
   { produto: "KeyManager Plus", edicao: "-", horas: 6, caminho: "Key Manager Plus/Escopo de Implantação - Key Manager Plus.docx" },
 
-  { produto: "Data Loss Prevetion", edicao: "-", horas: 6, caminho: "Data Loss Prevetion/Endpoint DLP Plus - Professional.docx" },
-
   { produto: "Firewall Analyzer", edicao: "-", horas: 6, caminho: "Firewall Analyzer/Escopo de Implantação - Firewall Analyzer - Professional Edition1.docx" },
 
   { produto: "M365 Management", edicao: "Standard", horas: 6, caminho: "M365 Management/Escopo_de_Implantação_-_M365MP_Standard.docx" },
