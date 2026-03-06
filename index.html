@@ -5,18 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horas de Implantação</title>
 
+  <!-- Favicon / Imagem da guia -->
+  <link rel="icon" type="image/png" href="assets/logo-centric.png" sizes="32x32" />
+  <link rel="icon" type="image/png" href="assets/logo-centric.png" sizes="192x192" />
+  <!-- (Opcional) se tiver .ico / iOS:
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  -->
+
   <style>
     :root{
       /* Tema em roxo */
-      --bg: #0b0a13; /* base escura neutra p/ contraste */
+      --bg: #0b0a13;
       --card: rgba(255,255,255,0.08);
       --card-border: rgba(255,255,255,0.10);
       --text: rgba(255,255,255,0.92);
       --muted: rgba(255,255,255,0.70);
 
-      /* Acentos em roxo/violeta */
-      --accent: #8b5cf6;   /* violeta 500 */
-      --accent-2: #7c3aed; /* violeta 600 */
+      --accent: #8b5cf6;    /* violeta 500 */
+      --accent-2: #7c3aed;  /* violeta 600 */
 
       --danger: #ff5a5f;
       --shadow: 0 18px 50px rgba(0,0,0,0.35);
@@ -29,7 +36,7 @@
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
       color: var(--text);
 
-      /* Gradiente/glow em roxo (estilo “manchas” do original) */
+      /* Glow roxo (radial-gradients) */
       background:
         radial-gradient(1200px 600px at 20% 0%,
                         rgba(139, 92, 246, 0.35), transparent 60%),
@@ -54,16 +61,15 @@
       margin-bottom: 18px;
     }
 
-    /* Logo no mesmo lugar (à esquerda do título) */
+    /* Logo maior (40px) no topo */
     .logoWrap{
       display: flex;
       align-items: center;
       gap: 12px;
     }
-
     .logo{
-      width: 22px;      /* ajuste fino para ficar como no topo */
-      height: 22px;
+      height: 40px;     /* como você pediu */
+      width: auto;
       display: block;
       object-fit: contain;
     }
@@ -122,24 +128,18 @@
       appearance: none;
       transition: border-color .15s ease, transform .05s ease;
     }
-
     select:focus{
-      border-color: rgba(139,92,246,0.8); /* roxo no foco */
+      border-color: rgba(139,92,246,0.8);
     }
-
-    /* ✅ FIX Windows: opções invisíveis */
+    /* ✅ FIX Windows */
     select option{
       color: #111 !important;
       background: #fff !important;
     }
-
-    /* alguns browsers respeitam */
     select option:checked{
       background: #8b5cf6 !important;
       color: #fff !important;
     }
-
-    /* ✅ Em vez de opacity (que “lava” o texto no Windows) */
     select:disabled{
       cursor: not-allowed;
       color: rgba(255,255,255,0.55);
@@ -147,10 +147,7 @@
       border-color: rgba(255,255,255,0.12);
     }
 
-    /* seta do select */
-    .selectWrap{
-      position: relative;
-    }
+    .selectWrap{ position: relative; }
     .selectWrap::after{
       content: "▾";
       position: absolute;
@@ -213,24 +210,18 @@
       user-select: none;
       white-space: nowrap;
     }
-
     .btn:hover{
       background: rgba(255,255,255,0.10);
       border-color: rgba(255,255,255,0.20);
     }
-
-    .btn:active{
-      transform: translateY(1px);
-    }
+    .btn:active{ transform: translateY(1px); }
 
     .btnPrimary{
       background: linear-gradient(180deg, var(--accent), var(--accent-2));
       border-color: rgba(139,92,246,0.65);
       color: #fff;
     }
-    .btnPrimary:hover{
-      filter: brightness(1.04);
-    }
+    .btnPrimary:hover{ filter: brightness(1.04); }
 
     .pill{
       display: inline-flex;
@@ -270,9 +261,9 @@
 <body>
   <div class="wrap">
     <div class="header">
-      <!-- Logo + Título no topo -->
+      <!-- Logo 40px + Título -->
       <div class="logoWrap">
-        <img src="assets/logo-centric.png" class="logo" alt="Centric">
+        <img src="assets/logo-centric.png" alt="Centric" class="logo" />
         <div>
           <h1 class="title">Serviço de Implantação</h1>
           <p class="subtitle">
@@ -336,14 +327,24 @@
     const edicaoSelect  = document.getElementById("edicao");
     const resultado     = document.getElementById("resultado");
     const linkEscopo    = document.getElementById("linkEscopo");
+    const aviso         = document.getElementById("escopoAviso");
 
     // Base SharePoint (Implantação já URL-encoded)
     const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantacao/";
 
-    // ---------- Aviso: mostrar/ocultar conforme href do link ----------
+    // Estado para controlar quando o aviso pode aparecer:
+    // Só mostra se o usuário já tiver selecionado Produto + Edição.
+    let selectionReady = false;
+
+    // ---------- Aviso: mostrar/ocultar conforme estado + href do link ----------
     function atualizarAvisoEscopo() {
-      const aviso = document.getElementById("escopoAviso");
       if (!aviso) return;
+
+      if (!selectionReady) {
+        // Antes de escolher produto+edição, o aviso NUNCA aparece.
+        aviso.style.display = "none";
+        return;
+      }
 
       const href = (linkEscopo?.getAttribute("href") || "").trim();
       const visivel = linkEscopo && linkEscopo.style.display !== "none";
@@ -365,6 +366,7 @@
       if (resultado) {
         resultado.textContent = "Erro ao carregar dados. Tente Ctrl+F5 (Windows) / Cmd+Shift+R (Mac).";
       }
+      // Não segue o fluxo se dados não existem
       throw new Error("window.dados undefined");
     }
     const dados = window.dados;
@@ -397,9 +399,14 @@
     produtoSelect.addEventListener("change", () => {
       const produto = produtoSelect.value;
 
+      // Ao mudar de produto, ainda não temos seleção completa
+      selectionReady = false;
+
       edicaoSelect.innerHTML = '<option value="">Selecione</option>';
       resultado.textContent = "";
       esconderLink();
+      // Esconde aviso ao trocar de produto
+      aviso.style.display = "none";
 
       if (!produto) {
         edicaoSelect.disabled = true;
@@ -426,13 +433,24 @@
       resultado.textContent = "";
       esconderLink();
 
+      // Só consideramos "selectionReady" quando há produto+edição válidos
+      selectionReady = Boolean(produto && edicao);
+
       const item = dados.find(d => d.produto === produto && d.edicao === edicao);
-      if (!item) return;
+
+      if (!item) {
+        // Produto+edição escolhidos mas sem item correspondente => mostra aviso
+        atualizarAvisoEscopo();
+        return;
+      }
 
       resultado.textContent = `⏱️ ${item.horas} horas de implantação`;
 
       if (item.caminho) {
         mostrarLink(item.caminho);
+      } else {
+        // Não tem caminho => sem botão => pode mostrar aviso
+        atualizarAvisoEscopo();
       }
     });
 
@@ -445,12 +463,18 @@
       resultado.textContent = "Selecione um produto e uma edição.";
       esconderLink();
 
+      // Reset do estado -> não mostrar aviso na tela inicial
+      selectionReady = false;
+      aviso.style.display = "none";
+
       // dispara change para manter fluxo padrão
       produtoSelect.dispatchEvent(new Event("change"));
     });
 
-    // Estado inicial do aviso
-    atualizarAvisoEscopo();
+    // Estado inicial do aviso — não exibir
+    selectionReady = false;
+    aviso.style.display = "none";
   </script>
 </body>
 </html>
+``
