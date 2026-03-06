@@ -6,15 +6,16 @@
 <title>Horas de Implantação</title>
 
 <style>
-
 :root{
-  --bg1:#ece6f3;
-  --bg2:#dcd2ea;
+  /* Fundo em roxo com gradiente suave */
+  --bg1:#efe6ff;   /* roxo bem claro (topo) */
+  --bg2:#d9c9ff;   /* roxo claro (base) */
 
   --card:#ffffff;
   --text:#3a235a;
   --muted:#6f5a8f;
 
+  /* Mantive os acentos em roxo/violeta */
   --accent:#7b4dff;
   --accent2:#5a3bd6;
 
@@ -25,266 +26,228 @@
 }
 
 *{
-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 body{
-margin:0;
-font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+  margin:0;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
 
-background:linear-gradient(180deg,var(--bg1),var(--bg2));
+  /* Gradiente de fundo em roxo */
+  background:linear-gradient(180deg,var(--bg1),var(--bg2));
 
-color:var(--text);
-
-min-height:100vh;
-
-padding:40px 16px;
+  color:var(--text);
+  min-height:100vh;
+  padding:40px 16px;
 }
 
 .wrap{
-max-width:900px;
-margin:auto;
+  max-width:900px;
+  margin:auto;
 }
 
 .header{
-display:flex;
-align-items:center;
-justify-content:space-between;
-margin-bottom:25px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  margin-bottom:25px;
 }
 
 .logoWrap{
-display:flex;
-align-items:center;
-gap:14px;
+  display:flex;
+  align-items:center;
+  gap:14px;
 }
 
 .logo{
-height:40px;
+  height:40px;
 }
 
 .title{
-margin:0;
-font-size:26px;
-font-weight:700;
+  margin:0;
+  font-size:26px;
+  font-weight:700;
 }
 
 .subtitle{
-margin-top:4px;
-color:var(--muted);
-font-size:14px;
+  margin-top:4px;
+  color:var(--muted);
+  font-size:14px;
 }
 
 .card{
-background:var(--card);
-border-radius:var(--radius);
-padding:22px;
-
-box-shadow:
-0 10px 25px rgba(0,0,0,0.05);
-
-border:1px solid var(--border);
+  background:var(--card);
+  border-radius:var(--radius);
+  padding:22px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.05);
+  border:1px solid var(--border);
 }
 
 .grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:14px;
-margin-top:12px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:14px;
+  margin-top:12px;
 }
 
 @media(max-width:720px){
-.grid{
-grid-template-columns:1fr;
-}
+  .grid{
+    grid-template-columns:1fr;
+  }
 }
 
 .field label{
-display:block;
-font-size:13px;
-margin-bottom:6px;
-color:var(--muted);
+  display:block;
+  font-size:13px;
+  margin-bottom:6px;
+  color:var(--muted);
 }
 
 select{
-width:100%;
-
-padding:12px;
-
-border-radius:12px;
-
-border:1px solid var(--border);
-
-background:#faf9fd;
-
-font-size:14px;
-
-color:var(--text);
+  width:100%;
+  padding:12px;
+  border-radius:12px;
+  border:1px solid var(--border);
+  background:#faf9fd;
+  font-size:14px;
+  color:var(--text);
 }
 
 select option{
-background:white;
-color:black;
+  background:white;
+  color:black;
 }
 
 .resultBox{
-
-margin-top:18px;
-
-background:#faf9fd;
-
-border-radius:14px;
-
-padding:16px;
-
-border:1px solid var(--border);
-
-display:flex;
-
-align-items:center;
-
-justify-content:space-between;
-
-gap:12px;
+  margin-top:18px;
+  background:#faf9fd;
+  border-radius:14px;
+  padding:16px;
+  border:1px solid var(--border);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
 }
 
 .resultado{
-font-size:18px;
-font-weight:700;
+  font-size:18px;
+  font-weight:700;
 }
 
 .actions{
-display:flex;
-gap:10px;
+  display:flex;
+  gap:10px;
 }
 
 .btn{
-
-border:none;
-
-border-radius:14px;
-
-padding:10px 16px;
-
-font-weight:600;
-
-cursor:pointer;
-
-font-size:14px;
-
-transition:0.2s;
+  border:none;
+  border-radius:14px;
+  padding:10px 16px;
+  font-weight:600;
+  cursor:pointer;
+  font-size:14px;
+  transition:0.2s;
 }
 
 .btnPrimary{
-
-background:linear-gradient(90deg,var(--accent),var(--accent2));
-
-color:white;
+  background:linear-gradient(90deg,var(--accent),var(--accent2));
+  color:white;
 }
 
 .btnPrimary:hover{
-
-transform:translateY(-1px);
-
-box-shadow:0 6px 14px rgba(123,77,255,0.35);
+  transform:translateY(-1px);
+  box-shadow:0 6px 14px rgba(123,77,255,0.35);
 }
 
 .btnSecondary{
-
-background:#eef0ff;
-
-color:#5a3bd6;
+  background:#eef0ff;
+  color:#5a3bd6;
 }
 
 .btnSecondary:hover{
-
-background:#e0e5ff;
+  background:#e0e5ff;
 }
 
 .footer{
-text-align:center;
-margin-top:30px;
-font-size:12px;
-color:#7a6b96;
+  text-align:center;
+  margin-top:30px;
+  font-size:12px;
+  color:#7a6b96;
 }
 
+/* (Opcional) estilo da pill se quiser manter */
+.pill{
+  background: rgba(90, 59, 214, 0.08);
+  color: #5a3bd6;
+  border: 1px solid rgba(90, 59, 214, 0.18);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
 </style>
 </head>
 
 <body>
-
 <div class="wrap">
 
-<div class="header">
+  <div class="header">
+    <div class="logoWrap">
+      <img src="assets/logo-centric.png" class="logo" alt="Centric">
+      <div>
+        <h1 class="title">Consulta de Horas de Implantação</h1>
+        <p class="subtitle">
+          Selecione o produto e a edição para ver o esforço estimado e acessar o escopo correspondente.
+        </p>
+      </div>
+    </div>
 
-<div class="logoWrap">
+    <div class="pill">⏱️ Portal interno • Escopos</div>
+  </div>
 
-<img src="assets/logo-centric.png" class="logo" alt="Centric">
+  <div class="card">
+    <div class="grid">
+      <div class="field">
+        <label for="produto">Produto</label>
+        <div class="selectWrap">
+          <select id="produto">
+            <option value="">Selecione</option>
+          </select>
+        </div>
+      </div>
 
-<div>
-<h1 class="title">Consulta de Horas de Implantação</h1>
-<p class="subtitle">
-Selecione o produto e a edição para ver o esforço estimado e acessar o escopo correspondente.
-</p>
-</div>
+      <div class="field">
+        <label for="edicao">Edição</label>
+        <div class="selectWrap">
+          <select id="edicao" disabled>
+            <option value="">Selecione</option>
+          </select>
+        </div>
+      </div>
+    </div>
 
-</div>
+    <div class="resultBox">
+      <div>
+        <div class="resultado" id="resultado">
+          Selecione um produto e uma edição.
+        </div>
+      </div>
 
-<div class="pill">⏱️ Portal interno • Escopos</div>
+      <div class="actions">
+        <a id="linkEscopo" class="btn btnPrimary" target="_blank" rel="noopener" style="display:none;">
+          📄 Abrir escopo
+        </a>
+        <button id="btnLimpar" class="btn" type="button">
+          ↺ Limpar
+        </button>
+      </div>
+    </div>
+  </div>
 
-</div>
-
-<div class="card">
-
-<div class="grid">
-
-<div class="field">
-<label for="produto">Produto</label>
-<div class="selectWrap">
-<select id="produto">
-<option value="">Selecione</option>
-</select>
-</div>
-</div>
-
-<div class="field">
-<label for="edicao">Edição</label>
-<div class="selectWrap">
-<select id="edicao" disabled>
-<option value="">Selecione</option>
-</select>
-</div>
-</div>
-
-</div>
-
-<div class="resultBox">
-
-<div>
-<div class="resultado" id="resultado">
-Selecione um produto e uma edição.
-</div>
-</div>
-
-<div class="actions">
-
-<a id="linkEscopo" class="btn btnPrimary" target="_blank" rel="noopener" style="display:none;">
-📄 Abrir escopo
-</a>
-
-<button id="btnLimpar" class="btn" type="button">
-↺ Limpar
-</button>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="footer">
-Centric • ManageEngine • Portal de horas de implantação
-</div>
+  <div class="footer">
+    Centric • ManageEngine • Portal de horas de implantação
+  </div>
 
 </div>
 
@@ -292,28 +255,23 @@ Centric • ManageEngine • Portal de horas de implantação
 <script src="app.js?v=20260218-3"></script>
 
 <script>
-
 document.getElementById("btnLimpar").addEventListener("click", () => {
+  const produto = document.getElementById("produto");
+  const edicao = document.getElementById("edicao");
+  const resultado = document.getElementById("resultado");
+  const link = document.getElementById("linkEscopo");
 
-const produto=document.getElementById("produto");
-const edicao=document.getElementById("edicao");
-const resultado=document.getElementById("resultado");
-const link=document.getElementById("linkEscopo");
+  produto.value = "";
+  edicao.innerHTML = '<option value="">Selecione</option>';
+  edicao.disabled = true;
 
-produto.value="";
-edicao.innerHTML='<option value="">Selecione</option>';
-edicao.disabled=true;
+  resultado.textContent = "Selecione um produto e uma edição.";
 
-resultado.textContent="Selecione um produto e uma edição.";
+  link.style.display = "none";
+  link.removeAttribute("href");
 
-link.style.display="none";
-link.removeAttribute("href");
-
-produto.dispatchEvent(new Event("change"));
-
+  produto.dispatchEvent(new Event("change"));
 });
-
 </script>
-
 </body>
 </html>
