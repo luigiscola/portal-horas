@@ -5,8 +5,8 @@ window.dados = [
   { produto: "ADAudit Plus", edicao: "Professional", horas: 10, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Professional.docx" },
   { produto: "ADAudit Plus", edicao: "Standard", horas: 8, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Standard.docx" },
 
-  { produto: "AD360", edicao: "Professional", horas: 28, caminho: "AD360/Escopo_de_Implantação_-_AD360_Professional.docx" },
-  { produto: "AD360", edicao: "Standard", horas: 22, caminho: "AD360/Escopo_de_Implantação_-_AD360_Standard.docx" },
+  { produto: "AD360 (ADAudit, ADManager e ADSelfService)", edicao: "Professional", horas: 28, caminho: "AD360/Escopo_de_Implantação_-_AD360_Professional.docx" },
+  { produto: "AD360 (ADAudit, ADManager e ADSelfService)", edicao: "Standard", horas: 22, caminho: "AD360/Escopo_de_Implantação_-_AD360_Standard.docx" },
 
   { produto: "Application Control Plus", edicao: "Professional", horas: 8, caminho: "Application Control/Application Control Plus - Professional.docx" },
   { produto: "DeviceControl Plus", edicao: "Professional", horas: 8, caminho: "Device Control Plus/DeviceControl Plus - Professional.docx" },
