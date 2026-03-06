@@ -177,7 +177,6 @@ gap:10px;
 flex-wrap:wrap;
 }
 
-<<<<<<< HEAD
 .btn{
 display:inline-flex;
 align-items:center;
@@ -222,45 +221,9 @@ text-align:center;
 }
 
 </style>
-=======
-    .footer{
-      margin-top: 14px;
-      color: rgba(255,255,255,0.55);
-      font-size: 12px;
-      text-align: center;
-    }
-
-    /* Aviso abaixo da resultBox */
-    .escopo-aviso{
-      margin-top: 10px;
-      text-align: center;
-      color: var(--danger);
-      font-size: 14px;
-      font-weight: 500;
-      padding: 8px 10px;
-      border-radius: 10px;
-      background: rgba(255, 90, 95, 0.08);
-      border: 1px solid rgba(255, 90, 95, 0.20);
-      display: none; /* começa oculto */
-    }
-  </style>
->>>>>>> 0710dbf9ba546aba2700cf2080832659423aacef
 </head>
 
 <body>
-<<<<<<< HEAD
-=======
-  <div class="wrap">
-    <div class="header">
-      <div>
-        <h1 class="title">Serviço de Implantação Padrão</h1>
-        <p class="subtitle">
-          Selecione o produto e a edição para ver as horas estimadas e acessar o escopo correspondente.
-        </p>
-      </div>
-      <div class="pill">⏱️ Portal interno • Escopos</div>
-    </div>
->>>>>>> 0710dbf9ba546aba2700cf2080832659423aacef
 
 <div class="wrap">
 
@@ -268,23 +231,7 @@ text-align:center;
 
 <div class="logoWrap">
 
-<<<<<<< HEAD
 <img src="assets/logo-centric.png" class="logo" alt="Centric">
-=======
-        <div class="actions">
-          <a id="linkEscopo" class="btn btnPrimary" target="_blank" rel="noopener" style="display:none;">
-            📄 Abrir escopo
-          </a>
-          <button id="btnLimpar" class="btn" type="button">↺ Limpar</button>
-        </div>
-      </div>
-
-      <!-- Aviso na faixa vermelha, abaixo da resultBox -->
-      <div id="escopoAviso" class="escopo-aviso">
-        Caso o escopo não esteja disponível, por favor entre em contato com o time técnico para que possamos auxiliar.
-      </div>
-    </div>
->>>>>>> 0710dbf9ba546aba2700cf2080832659423aacef
 
 <div>
 <h1 class="title">Consulta de Horas de Implantação</h1>
@@ -293,47 +240,14 @@ Selecione o produto e a edição para ver o esforço estimado e acessar o escopo
 </p>
 </div>
 
-<<<<<<< HEAD
 </div>
-=======
-  <!-- =========================================================
-       1) dados.js deve definir window.dados, ex.:
-       window.dados = [
-         { produto: "Analytics Plus", edicao: "Enterprise", horas: 16, caminho: "Analytics Plus/Enterprise.docx" },
-         { produto: "Analytics Plus", edicao: "Standard",  horas: 12, caminho: "" /* sem escopo */ }
-       ];
-       ========================================================= -->
-  <script src="dados.js?v=20260218-2"></script>
->>>>>>> 0710dbf9ba546aba2700cf2080832659423aacef
 
-<<<<<<< HEAD
 <div class="pill">⏱️ Portal interno • Escopos</div>
-=======
-  <!-- 2) App inline com MutationObserver (pode mover para app.js se preferir) -->
-<script>
-  const produtoSelect = document.getElementById("produto");
-  const edicaoSelect  = document.getElementById("edicao");
-  const resultado     = document.getElementById("resultado");
-  const linkEscopo    = document.getElementById("linkEscopo");
->>>>>>> 0710dbf9ba546aba2700cf2080832659423aacef
 
-<<<<<<< HEAD
 </div>
-=======
-  // Base SharePoint (Implantação já URL-encoded)
-  const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantacao/";
->>>>>>> 0710dbf9ba546aba2700cf2080832659423aacef
 
-<<<<<<< HEAD
 <div class="card">
-=======
-  // ----- Aviso: só considera quando produto & edição estiverem selecionados -----
-  function atualizarAvisoEscopo() {
-    const aviso = document.getElementById("escopoAviso");
-    if (!aviso) return;
->>>>>>> 0710dbf9ba546aba2700cf2080832659423aacef
 
-<<<<<<< HEAD
 <div class="grid">
 
 <div class="field">
@@ -413,139 +327,5 @@ produto.dispatchEvent(new Event("change"));
 
 </script>
 
-=======
-    const produtoSelecionado = !!produtoSelect.value;
-    const edicaoSelecionada  = !!edicaoSelect.value;
-
-    // Enquanto não houver produto + edição, não mostra o aviso
-    if (!produtoSelecionado || !edicaoSelecionada) {
-      aviso.style.display = "none";
-      return;
-    }
-
-    // A partir daqui, aplica a regra do href/visibilidade do botão
-    const href = (linkEscopo?.getAttribute("href") || "").trim();
-    const visivel = linkEscopo && linkEscopo.style.display !== "none";
-
-    if (!href || !visivel) {
-      aviso.style.display = "block";
-    } else {
-      aviso.style.display = "none";
-    }
-  }
-
-  // Observa mudanças no botão feitas pelo script (href/estilo/classe)
-  const _obs = new MutationObserver(atualizarAvisoEscopo);
-  _obs.observe(linkEscopo, { attributes: true, attributeFilter: ["href", "style", "class"] });
-
-  // ---------- Validação de dados ----------
-  if (!Array.isArray(window.dados)) {
-    console.error("dados.js não carregou ou não definiu 'window.dados'.");
-    if (resultado) {
-      resultado.textContent = "Erro ao carregar dados. Tente Ctrl+F5 (Windows) / Cmd+Shift+R (Mac).";
-    }
-    throw new Error("window.dados undefined");
-  }
-  const dados = window.dados;
-
-  // ---------- Popular Produtos ----------
-  const produtos = [...new Set(dados.map(d => d.produto))].sort();
-  produtos.forEach(p => {
-    const opt = document.createElement("option");
-    opt.value = opt.textContent = p;
-    produtoSelect.appendChild(opt);
-  });
-
-  // ---------- Helpers para o link ----------
-  function esconderLink() {
-    linkEscopo.style.display = "none";
-    linkEscopo.removeAttribute("href");
-    linkEscopo.textContent = "";
-    atualizarAvisoEscopo();
-  }
-
-  function mostrarLink(caminho) {
-    const url = BASE_SP + encodeURIComponent(caminho).replace(/%2F/g, "/");
-    linkEscopo.href = url;
-    linkEscopo.textContent = "📄 Abrir escopo";
-    linkEscopo.style.display = "inline-block";
-    atualizarAvisoEscopo();
-  }
-
-  // ---------- Eventos ----------
-  produtoSelect.addEventListener("change", () => {
-    const produto = produtoSelect.value;
-
-    edicaoSelect.innerHTML = '<option value="">Selecione</option>';
-    resultado.textContent = "";
-    esconderLink(); // também oculta o aviso
-
-    if (!produto) {
-      edicaoSelect.disabled = true;
-      // Sem produto + edição -> manter aviso oculto
-      atualizarAvisoEscopo();
-      return;
-    }
-
-    const edicoes = dados
-      .filter(d => d.produto === produto)
-      .map(d => d.edicao);
-
-    [...new Set(edicoes)].sort().forEach(ed => {
-      const opt = document.createElement("option");
-      opt.value = opt.textContent = ed;
-      edicaoSelect.appendChild(opt);
-    });
-
-    edicaoSelect.disabled = false;
-    // Ainda não há edição selecionada -> manter aviso oculto
-    atualizarAvisoEscopo();
-  });
-
-  edicaoSelect.addEventListener("change", () => {
-    const produto = produtoSelect.value;
-    const edicao  = edicaoSelect.value;
-
-    resultado.textContent = "";
-    esconderLink(); // também oculta o aviso
-
-    const item = dados.find(d => d.produto === produto && d.edicao === edicao);
-    if (!item) {
-      // Produto + edição selecionados, mas sem item (dados) -> mostra aviso
-      atualizarAvisoEscopo();
-      return;
-    }
-
-    resultado.textContent = `⏱️ ${item.horas} horas de implantação`;
-
-    if (item.caminho) {
-      mostrarLink(item.caminho);
-    } else {
-      // Sem caminho: produto+edição estão preenchidos -> exibe aviso
-      atualizarAvisoEscopo();
-    }
-  });
-
-  // ---------- Botão Limpar ----------
-  document.getElementById("btnLimpar").addEventListener("click", () => {
-    produtoSelect.value = "";
-    edicaoSelect.innerHTML = '<option value="">Selecione</option>';
-    edicaoSelect.disabled = true;
-
-    resultado.textContent = "Selecione um produto e uma edição.";
-    esconderLink(); // oculta aviso e botão
-
-    // dispara change para manter fluxo padrão
-    produtoSelect.dispatchEvent(new Event("change"));
-    // Por segurança, força ocultar o aviso no estado inicial
-    document.getElementById("escopoAviso").style.display = "none";
-  });
-
-  // Estado inicial: garantir aviso oculto
-  document.getElementById("escopoAviso").style.display = "none";
-  atualizarAvisoEscopo();
-</script>
->>>>>>> 0710dbf9ba546aba2700cf2080832659423aacef
 </body>
 </html>
-
