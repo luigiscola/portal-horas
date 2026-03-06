@@ -88,12 +88,36 @@
     }
 
     .card{
+      /* ===== ajustes para receber o glow interno ===== */
+      position: relative;     /* permite posicionar o ::before */
+      overflow: hidden;       /* evita glow “vazar” nos cantos arredondados */
+
       background: var(--card);
       border: 1px solid var(--card-border);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
       padding: 18px;
+    }
+
+    /* ===== glow roxo simétrico atrás de Produto e Edição ===== */
+    .card::before{
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0; /* fica atrás do conteúdo */
+
+      /* dois spots: esquerda (Produto) e direita (Edição) */
+      background:
+        radial-gradient(500px 260px at 22% 12%, rgba(139,92,246,0.25), transparent 60%),
+        radial-gradient(500px 260px at 78% 12%, rgba(139,92,246,0.25), transparent 60%);
+    }
+
+    /* garante que o conteúdo fique acima do glow */
+    .card > *{
+      position: relative;
+      z-index: 1;
     }
 
     .grid{
@@ -107,6 +131,12 @@
       .grid{ grid-template-columns: 1fr; }
       .header{ flex-direction: column; align-items: flex-start; }
       .logoWrap{ align-items: flex-start; }
+
+      /* em telas pequenas, um único glow central suavizado */
+      .card::before{
+        background:
+          radial-gradient(460px 240px at 50% 10%, rgba(139,92,246,0.22), transparent 60%);
+      }
     }
 
     .field label{
@@ -477,4 +507,3 @@
   </script>
 </body>
 </html>
-
