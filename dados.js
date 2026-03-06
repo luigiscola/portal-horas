@@ -77,12 +77,12 @@ window.dados = [
 
   { produto: "GO-Global", edicao: "-", horas: 2, caminho: "Go-Global/Escopo-Implantação-GG.docx" },
 
-  { produto: "PasswordManager Pro", edicao: "Standard", horas: 12, caminho: "PasswordManager Pro/Escopo de Implantação - PMP - Standart Edition.docx" },
+  { produto: "PasswordManager Pro", edicao: "Standard", horas: 10, caminho: "PasswordManager Pro/Escopo de Implantação - PMP - Standart Edition.docx" },
   { produto: "PasswordManager Pro", edicao: "Premium", horas: 12, caminho: "PasswordManager Pro/Escopo de Implantação - PMP - Premium Edition.docx" },
-  { produto: "PasswordManager Pro", edicao: "Enterprise", horas: 12, caminho: "PasswordManager Pro/Escopo de Implantação - PMP - Enterprise Edition.docx" },
-  { produto: "PasswordManager Pro MSP", edicao: "-", horas: 12, caminho: "PasswordManager Pro MSP/Escopo de Implantação - PMP -  MSP.docx" },
+  { produto: "PasswordManager Pro", edicao: "Enterprise", horas: 14, caminho: "PasswordManager Pro/Escopo de Implantação - PMP - Enterprise Edition.docx" },
+  { produto: "PasswordManager Pro MSP", edicao: "-", horas: 20, caminho: "PasswordManager Pro MSP/Escopo de Implantação - PMP -  MSP.docx" },
   { produto: "PAM 360", edicao: "-", horas: 16, caminho: "PAM 360/Escopo de Implantação - PAM360.docx" },
-  { produto: "PAM 360 MSP", edicao: "-", horas: 16, caminho: "PAM 360 MSP/Escopo de Implantação - PAM360 - MSP.docx" },
+  { produto: "PAM 360 MSP", edicao: "-", horas: 20, caminho: "PAM 360 MSP/Escopo de Implantação - PAM360 - MSP.docx" },
   { produto: "KeyManager Plus", edicao: "-", horas: 6, caminho: "Key Manager Plus/Escopo de Implantação - Key Manager Plus.docx" },
 
   { produto: "Firewall Analyzer", edicao: "Professional", horas: 14, caminho: "Firewall Analyzer/Escopo de Implantação - Firewall Analyzer - Professional Edition1.docx" },
