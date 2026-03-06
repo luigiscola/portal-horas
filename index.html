@@ -5,14 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Horas de Implantação</title>
 
-  <!-- Favicon / Imagem da guia do navegador -->
-  <link rel="icon" type="image/png" href="assets/logo-centric.png" sizes="32x32" />
-  <link rel="icon" type="image/png" href="assets/logo-centric.png" sizes="192x192" />
-  <!-- (Opcional) se tiver .ico e ícone para iOS, mantenha também:
-  <link rel="icon" href="assets/favicon.ico" sizes="any" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  -->
-
   <style>
     :root{
       /* Tema em roxo */
@@ -62,15 +54,16 @@
       margin-bottom: 18px;
     }
 
-    /* Logo maior (como estava antes, 40px de altura) */
+    /* Logo no mesmo lugar (à esquerda do título) */
     .logoWrap{
       display: flex;
       align-items: center;
       gap: 12px;
     }
+
     .logo{
-      height: 40px;     /* tamanho grande */
-      width: auto;      /* mantém proporção */
+      width: 22px;      /* ajuste fino para ficar como no topo */
+      height: 22px;
       display: block;
       object-fit: contain;
     }
@@ -129,6 +122,7 @@
       appearance: none;
       transition: border-color .15s ease, transform .05s ease;
     }
+
     select:focus{
       border-color: rgba(139,92,246,0.8); /* roxo no foco */
     }
@@ -138,10 +132,14 @@
       color: #111 !important;
       background: #fff !important;
     }
+
+    /* alguns browsers respeitam */
     select option:checked{
       background: #8b5cf6 !important;
       color: #fff !important;
     }
+
+    /* ✅ Em vez de opacity (que “lava” o texto no Windows) */
     select:disabled{
       cursor: not-allowed;
       color: rgba(255,255,255,0.55);
@@ -150,7 +148,9 @@
     }
 
     /* seta do select */
-    .selectWrap{ position: relative; }
+    .selectWrap{
+      position: relative;
+    }
     .selectWrap::after{
       content: "▾";
       position: absolute;
@@ -213,18 +213,24 @@
       user-select: none;
       white-space: nowrap;
     }
+
     .btn:hover{
       background: rgba(255,255,255,0.10);
       border-color: rgba(255,255,255,0.20);
     }
-    .btn:active{ transform: translateY(1px); }
+
+    .btn:active{
+      transform: translateY(1px);
+    }
 
     .btnPrimary{
       background: linear-gradient(180deg, var(--accent), var(--accent-2));
       border-color: rgba(139,92,246,0.65);
       color: #fff;
     }
-    .btnPrimary:hover{ filter: brightness(1.04); }
+    .btnPrimary:hover{
+      filter: brightness(1.04);
+    }
 
     .pill{
       display: inline-flex;
@@ -264,9 +270,9 @@
 <body>
   <div class="wrap">
     <div class="header">
-      <!-- Logo maior + Título -->
+      <!-- Logo + Título no topo -->
       <div class="logoWrap">
-        assets/logo-centric.png
+        <img src="assets/logo-centric.png" class="logo" alt="Centric">
         <div>
           <h1 class="title">Serviço de Implantação</h1>
           <p class="subtitle">
@@ -322,7 +328,7 @@
   </div>
 
   <!-- 1) dados.js deve definir window.dados -->
-  dados.js?v=20260218-2</script>
+  <script src="dados.js?v=20260218-2"></script>
 
   <!-- 2) App inline -->
   <script>
@@ -330,24 +336,14 @@
     const edicaoSelect  = document.getElementById("edicao");
     const resultado     = document.getElementById("resultado");
     const linkEscopo    = document.getElementById("linkEscopo");
-    const aviso         = document.getElementById("escopoAviso");
 
     // Base SharePoint (Implantação já URL-encoded)
     const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantacao/";
 
-    // Estado para controlar quando o aviso pode aparecer:
-    // Só mostra se o usuário já tiver selecionado Produto + Edição.
-    let selectionReady = false;
-
-    // ---------- Aviso: mostrar/ocultar conforme estado + href do link ----------
+    // ---------- Aviso: mostrar/ocultar conforme href do link ----------
     function atualizarAvisoEscopo() {
+      const aviso = document.getElementById("escopoAviso");
       if (!aviso) return;
-
-      if (!selectionReady) {
-        // Antes de escolher produto+edição, o aviso NUNCA aparece.
-        aviso.style.display = "none";
-        return;
-      }
 
       const href = (linkEscopo?.getAttribute("href") || "").trim();
       const visivel = linkEscopo && linkEscopo.style.display !== "none";
@@ -401,14 +397,9 @@
     produtoSelect.addEventListener("change", () => {
       const produto = produtoSelect.value;
 
-      // Ao mudar de produto, ainda não temos seleção completa
-      selectionReady = false;
-
       edicaoSelect.innerHTML = '<option value="">Selecione</option>';
       resultado.textContent = "";
       esconderLink();
-      // Esconde aviso ao trocar de produto
-      aviso.style.display = "none";
 
       if (!produto) {
         edicaoSelect.disabled = true;
@@ -436,23 +427,12 @@
       esconderLink();
 
       const item = dados.find(d => d.produto === produto && d.edicao === edicao);
-
-      // Só consideramos "selectionReady" quando há produto+edição válidos
-      selectionReady = Boolean(produto && edicao);
-
-      if (!item) {
-        // Produto+edição escolhidos mas sem item correspondente => mostra aviso
-        atualizarAvisoEscopo();
-        return;
-      }
+      if (!item) return;
 
       resultado.textContent = `⏱️ ${item.horas} horas de implantação`;
 
       if (item.caminho) {
         mostrarLink(item.caminho);
-      } else {
-        // Não tem caminho => sem botão => pode mostrar aviso
-        atualizarAvisoEscopo();
       }
     });
 
@@ -465,17 +445,12 @@
       resultado.textContent = "Selecione um produto e uma edição.";
       esconderLink();
 
-      // Reset do estado -> não mostrar aviso na tela inicial
-      selectionReady = false;
-      aviso.style.display = "none";
-
       // dispara change para manter fluxo padrão
       produtoSelect.dispatchEvent(new Event("change"));
     });
 
-    // Estado inicial do aviso — não exibir
-    selectionReady = false;
-    aviso.style.display = "none";
+    // Estado inicial do aviso
+    atualizarAvisoEscopo();
   </script>
 </body>
 </html>
