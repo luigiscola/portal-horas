@@ -2,11 +2,11 @@ window.dados = [
   { produto: "Vulnerability Manager Plus", edicao: "Enterprise", horas: 10, caminho: "Vulnerability Manager Plus/Vulnerability Manager Plus - Enterprise.docx" },
   { produto: "Vulnerability Manager Plus", edicao: "Professional", horas: 8, caminho: "Vulnerability Manager Plus/Vulnerability Manager Plus - Professional.docx" },
 
-  { produto: "ADAudit Plus", edicao: "Professional", horas: 14, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Professional.docx" },
-  { produto: "ADAudit Plus", edicao: "Standard", horas: 14, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Standard.docx" },
+  { produto: "ADAudit Plus", edicao: "Professional", horas: 10, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Professional.docx" },
+  { produto: "ADAudit Plus", edicao: "Standard", horas: 8, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Standard.docx" },
 
-  { produto: "AD360", edicao: "Professional", horas: 14, caminho: "AD360/Escopo_de_Implantação_-_AD360_Professional.docx" },
-  { produto: "AD360", edicao: "Standard", horas: 14, caminho: "AD360/Escopo_de_Implantação_-_AD360_Standard.docx" },
+  { produto: "AD360", edicao: "Professional", horas: 28, caminho: "AD360/Escopo_de_Implantação_-_AD360_Professional.docx" },
+  { produto: "AD360", edicao: "Standard", horas: 22, caminho: "AD360/Escopo_de_Implantação_-_AD360_Standard.docx" },
 
   { produto: "Application Control Plus", edicao: "Professional", horas: 8, caminho: "Application Control/Application Control Plus - Professional.docx" },
   { produto: "DeviceControl Plus", edicao: "Professional", horas: 8, caminho: "Device Control Plus/DeviceControl Plus - Professional.docx" },
@@ -63,11 +63,11 @@ window.dados = [
   { produto: "ServiceDesk Plus Cloud", edicao: "Professional", horas: 20, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação - SDP Cloud Professional.docx" },
   { produto: "ServiceDesk Plus Cloud", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação - SDP Cloud Enterprise.docx" },
 
-  { produto: "ADManager Plus", edicao: "Standard", horas: 14, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Standard.docx" },
-  { produto: "ADManager Plus", edicao: "Professional", horas: 14, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Professional.docx" },
+  { produto: "ADManager Plus", edicao: "Standard", horas: 8, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Standard.docx" },
+  { produto: "ADManager Plus", edicao: "Professional", horas: 10, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Professional.docx" },
   
-  { produto: "ADSelfService Plus", edicao: "Standard", horas: 14, caminho: "ADSelfService Plus/Escopo_de_Implantação_-_ADSelfService_Standard.docx" },
-  { produto: "ADSelfService Plus", edicao: "Professional", horas: 14, caminho: "ADSelfService Plus/Escopo_de_Implantação_-_ADSelfService_Professional.docx" },
+  { produto: "ADSelfService Plus", edicao: "Standard", horas: 6, caminho: "ADSelfService Plus/Escopo_de_Implantação_-_ADSelfService_Standard.docx" },
+  { produto: "ADSelfService Plus", edicao: "Professional", horas: 8, caminho: "ADSelfService Plus/Escopo_de_Implantação_-_ADSelfService_Professional.docx" },
 
   { produto: "Analytics Plus", edicao: "Professional", horas: 14, caminho: "" },
   { produto: "Analytics Plus", edicao: "Enterprise", horas: 16, caminho: "" },
@@ -87,8 +87,8 @@ window.dados = [
 
   { produto: "Firewall Analyzer", edicao: "Professional", horas: 14, caminho: "Firewall Analyzer/Escopo de Implantação - Firewall Analyzer - Professional Edition1.docx" },
 
-  { produto: "M365 Management", edicao: "Standard", horas: 14, caminho: "M365 Management/Escopo_de_Implantação_-_M365MP_Standard.docx" },
-  { produto: "M365 Management", edicao: "Professional", horas: 14, caminho: "M365 Management/Escopo_de_Implantação_-_M365MP_Professional.docx" },
+  { produto: "M365 Management", edicao: "Standard", horas: 4, caminho: "M365 Management/Escopo_de_Implantação_-_M365MP_Standard.docx" },
+  { produto: "M365 Management", edicao: "Professional", horas: 6, caminho: "M365 Management/Escopo_de_Implantação_-_M365MP_Professional.docx" },
 
   { produto: "MDM MSP", edicao: "On-Premise Standard", horas: 12, caminho: "Mobile Device Management Plus MSP/MDM MSP On-Prem - Standard.docx" },
   { produto: "MDM MSP", edicao: "On-Premise Professional", horas: 14, caminho: "Mobile Device Management Plus MSP/MDM MSP On-Prem - Professional.docx" },
@@ -104,7 +104,7 @@ window.dados = [
   { produto: "Patch Manager Plus Cloud", edicao: "Professional", horas: 6, caminho: "Patch Manager Plus Cloud/Patch Manager Plus Cloud Professional.docx" },
   { produto: "Patch Manager Plus Cloud", edicao: "Enterprise", horas: 8, caminho: "Patch Manager Plus Cloud/Patch Manager Plus Cloud Enterprise .docx" },
 
-  { produto: "Recovery Manager Plus", edicao: "Standard", horas: 14, caminho: "Recovery Manager Plus/Escopo_de_Implantação_-_RecoveryManagerPlus_Standard.docx" },
+  { produto: "Recovery Manager Plus", edicao: "Standard", horas: 4, caminho: "Recovery Manager Plus/Escopo_de_Implantação_-_RecoveryManagerPlus_Standard.docx" },
 
   { produto: "Data Security Plus", edicao: "-", horas: 0, caminho: "" },
   { produto: "EventLog Analyzer", edicao: "-", horas: 0, caminho: "" },
