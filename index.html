@@ -3,519 +3,113 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Horas de Implantação</title>
-
-  <!-- Favicon / Imagem da guia -->
+  <title>Portal de Horas</title>
   <link rel="icon" type="image/png" href="assets/logo-centric.png" sizes="32x32" />
   <link rel="icon" type="image/png" href="assets/logo-centric.png" sizes="192x192" />
-  <!-- (Opcional) se tiver .ico / iOS:
-  <link rel="icon" href="assets/favicon.ico" />
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
-  -->
-
   <style>
-    :root{
-      /* Tema em roxo */
+    :root {
       --bg: #0b0a13;
-      --card: rgba(255,255,255,0.08);
-      --card-border: rgba(255,255,255,0.10);
-      --text: rgba(255,255,255,0.92);
-      --muted: rgba(255,255,255,0.70);
-
-      --accent: #8b5cf6;    /* violeta 500 */
-      --accent-2: #7c3aed;  /* violeta 600 */
-
-      --danger: #ff5a5f;
-      --shadow: 0 18px 50px rgba(0,0,0,0.35);
-      --radius: 16px;
+      --text: rgba(255, 255, 255, 0.92);
+      --muted: rgba(255, 255, 255, 0.7);
+      --card: rgba(255, 255, 255, 0.08);
+      --border: rgba(255, 255, 255, 0.14);
+      --accent: #8b5cf6;
+      --accent-2: #7c3aed;
     }
 
-    *{ box-sizing: border-box; }
-    body{
-      margin: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-      color: var(--text);
+    * { box-sizing: border-box; }
 
-      /* Glow roxo (radial-gradients) */
-      background:
-        radial-gradient(1200px 600px at 20% 0%,
-                        rgba(139, 92, 246, 0.35), transparent 60%),
-        radial-gradient(900px 500px at 100% 20%,
-                        rgba(167, 139, 250, 0.20), transparent 55%),
-        var(--bg);
-
+    body {
       min-height: 100vh;
-      padding: 32px 16px;
-    }
-
-    .wrap{
-      max-width: 980px;
-      margin: 0 auto;
-    }
-
-    .header{
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 16px;
-      margin-bottom: 18px;
-    }
-
-    .headerActions{
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    /* Logo maior (40px) no topo */
-    .logoWrap{
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    .logo{
-      height: 40px;     /* como você pediu */
-      width: auto;
-      display: block;
-      object-fit: contain;
-    }
-
-    .title{
       margin: 0;
-      font-size: 24px;
-      letter-spacing: -0.3px;
-    }
-
-    .subtitle{
-      margin: 6px 0 0;
-      color: var(--muted);
-      font-size: 14px;
-      line-height: 1.4;
-    }
-
-    .card{
-      /* ===== ajustes para receber o glow interno ===== */
-      position: relative;     /* permite posicionar o ::before */
-      overflow: hidden;       /* evita glow “vazar” nos cantos arredondados */
-
-      background: var(--card);
-      border: 1px solid var(--card-border);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(10px);
-      padding: 18px;
-    }
-
-    /* ===== glow roxo simétrico atrás de Produto e Edição ===== */
-    .card::before{
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0; /* fica atrás do conteúdo */
-
-      /* dois spots: esquerda (Produto) e direita (Edição) */
-      background:
-        radial-gradient(500px 260px at 22% 12%, rgba(139,92,246,0.25), transparent 60%),
-        radial-gradient(500px 260px at 78% 12%, rgba(139,92,246,0.25), transparent 60%);
-    }
-
-    /* garante que o conteúdo fique acima do glow */
-    .card > *{
-      position: relative;
-      z-index: 1;
-    }
-
-    .grid{
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      margin-top: 12px;
-    }
-
-    @media (max-width: 720px){
-      .grid{ grid-template-columns: 1fr; }
-      .header{ flex-direction: column; align-items: flex-start; }
-      .logoWrap{ align-items: flex-start; }
-      .headerActions{ width: 100%; justify-content: space-between; }
-
-      /* em telas pequenas, um único glow central suavizado */
-      .card::before{
-        background:
-          radial-gradient(460px 240px at 50% 10%, rgba(139,92,246,0.22), transparent 60%);
-      }
-    }
-
-    .field label{
-      display: block;
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 8px;
-    }
-
-    /* SELECT */
-    select{
-      width: 100%;
-      padding: 12px 14px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.16);
-      background: rgba(255,255,255,0.06);
+      place-items: center;
+      padding: 32px 16px;
       color: var(--text);
-      outline: none;
-      appearance: none;
-      transition: border-color .15s ease, transform .05s ease;
-    }
-    select:focus{
-      border-color: rgba(139,92,246,0.8);
-    }
-    /* ✅ FIX Windows */
-    select option{
-      color: #111 !important;
-      background: #fff !important;
-    }
-    select option:checked{
-      background: #8b5cf6 !important;
-      color: #fff !important;
-    }
-    select:disabled{
-      cursor: not-allowed;
-      color: rgba(255,255,255,0.55);
-      background: rgba(255,255,255,0.03);
-      border-color: rgba(255,255,255,0.12);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(1200px 600px at 20% 0%, rgba(139, 92, 246, 0.35), transparent 60%),
+        radial-gradient(900px 500px at 100% 20%, rgba(167, 139, 250, 0.2), transparent 55%),
+        var(--bg);
     }
 
-    .selectWrap{ position: relative; }
-    .selectWrap::after{
-      content: "▾";
-      position: absolute;
-      right: 12px;
-      top: 50%;
-      transform: translateY(-50%);
-      pointer-events: none;
-      color: rgba(255,255,255,0.75);
+    main {
+      width: min(100%, 720px);
+      padding: 40px;
+      text-align: center;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      background: var(--card);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .logo { height: 48px; width: auto; margin-bottom: 10px; }
+    .brand {
+      margin-bottom: 8px;
+      color: var(--muted);
       font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+    h1 { margin: 0; font-size: clamp(26px, 5vw, 34px); letter-spacing: -0.5px; }
+    p { max-width: 500px; margin: 12px auto 30px; color: var(--muted); line-height: 1.5; }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
     }
 
-    .resultBox{
-      margin-top: 16px;
-      border-radius: 14px;
-      border: 1px solid rgba(255,255,255,0.12);
-      background: rgba(255,255,255,0.05);
-      padding: 14px;
+    .service-link {
       display: flex;
+      min-height: 116px;
       align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      min-height: 64px;
-    }
-
-    @media (max-width: 720px){
-      .resultBox{ flex-direction: column; align-items: flex-start; }
-      .actions{ width: 100%; justify-content: flex-start; }
-      .btn{ width: 100%; justify-content: center; }
-    }
-
-    .resultado{
+      justify-content: center;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.06);
       font-size: 18px;
       font-weight: 700;
-      letter-spacing: -0.2px;
-      color: rgba(255,255,255,0.95);
-    }
-
-    .actions{
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-      justify-content: flex-end;
-    }
-
-    .btn{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 10px 12px;
-      border-radius: 12px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.06);
-      color: var(--text);
       text-decoration: none;
-      font-weight: 600;
-      font-size: 13px;
-      transition: transform .05s ease, background .15s ease, border-color .15s ease;
-      cursor: pointer;
-      user-select: none;
-      white-space: nowrap;
+      transition: transform .15s ease, background .15s ease, border-color .15s ease;
     }
-    .btn:hover{
-      background: rgba(255,255,255,0.10);
-      border-color: rgba(255,255,255,0.20);
-    }
-    .btn:active{ transform: translateY(1px); }
 
-    .btnPrimary{
+    .service-link:hover,
+    .service-link:focus-visible {
+      border-color: rgba(139, 92, 246, 0.75);
       background: linear-gradient(180deg, var(--accent), var(--accent-2));
-      border-color: rgba(139,92,246,0.65);
-      color: #fff;
+      outline: none;
+      transform: translateY(-2px);
     }
-    .btnPrimary:hover{ filter: brightness(1.04); }
 
-    .pill{
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 10px;
-      border-radius: 999px;
-      border: 1px solid rgba(255,255,255,0.14);
-      background: rgba(255,255,255,0.06);
-      color: var(--muted);
+    .footer {
+      margin: 22px 0 0;
+      color: rgba(255, 255, 255, 0.55);
       font-size: 12px;
+      line-height: 1.5;
     }
 
-    .footer{
-      margin-top: 14px;
-      color: rgba(255,255,255,0.55);
-      font-size: 12px;
-      text-align: center;
-    }
-
-    /* Aviso abaixo da resultBox */
-    .escopo-aviso{
-      margin-top: 10px;
-      text-align: center;
-      color: var(--danger);
-      font-size: 14px;
-      font-weight: 500;
-      padding: 8px 10px;
-      border-radius: 10px;
-      background: rgba(255, 90, 95, 0.08);
-      border: 1px solid rgba(255, 90, 95, 0.20);
-      display: none; /* começa oculto */
+    @media (max-width: 520px) {
+      main { padding: 32px 20px; }
+      .services { grid-template-columns: 1fr; }
     }
   </style>
 </head>
-
 <body>
-  <div class="wrap">
-    <div class="header">
-      <!-- Logo 40px + Título -->
-      <div class="logoWrap">
-        <img src="assets/logo-centric.png" alt="Centric" class="logo" />
-        <div>
-          <h1 class="title">Serviço de Implantação</h1>
-          <p class="subtitle">
-            Selecione o produto e a edição para ver as horas estimadas e acessar o escopo correspondente.
-          </p>
-        </div>
-      </div>
-
-      <div class="headerActions">
-        <div class="pill">⏱️ Portal interno • Escopos</div>
-        <a class="btn" href="home.html" aria-label="Voltar ao menu principal">← Voltar</a>
-      </div>
-    </div>
-
-    <div class="card">
-      <div class="grid">
-        <div class="field">
-          <label for="produto">Produto</label>
-          <div class="selectWrap">
-            <select id="produto">
-              <option value="">Selecione</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="field">
-          <label for="edicao">Edição</label>
-          <div class="selectWrap">
-            <select id="edicao" disabled>
-              <option value="">Selecione</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <div class="resultBox">
-        <div>
-          <div class="resultado" id="resultado">Selecione um produto e uma edição.</div>
-        </div>
-
-        <div class="actions">
-          <a id="linkEscopo" class="btn btnPrimary" target="_blank" rel="noopener" style="display:none;">
-            📄 Abrir escopo
-          </a>
-          <button id="btnLimpar" class="btn" type="button">↺ Limpar</button>
-        </div>
-      </div>
-
-      <!-- Aviso na faixa vermelha, abaixo da resultBox -->
-      <div id="escopoAviso" class="escopo-aviso">
-        Caso o Escopo não esteja disponível por favor entrar em contato com o Time Técnico
-      </div>
-    </div>
-
-    <div class="footer">Centric • ManageEngine • Portal de horas de implantação</div>
-  </div>
-
-  <!-- 1) dados.js deve definir window.dados -->
-  <script src="dados.js?v=20260218-2"></script>
-
-  <!-- 2) App inline -->
-  <script>
-    const produtoSelect = document.getElementById("produto");
-    const edicaoSelect  = document.getElementById("edicao");
-    const resultado     = document.getElementById("resultado");
-    const linkEscopo    = document.getElementById("linkEscopo");
-    const aviso         = document.getElementById("escopoAviso");
-
-    // Base SharePoint (Implantação já URL-encoded)
-    const BASE_SP = "https://centricbr.sharepoint.com/sites/ti/Shared%20Documents/Escopos/Implantacao/";
-
-    // Estado para controlar quando o aviso pode aparecer:
-    // Só mostra se o usuário já tiver selecionado Produto + Edição.
-    let selectionReady = false;
-
-    // ---------- Aviso: mostrar/ocultar conforme estado + href do link ----------
-    function atualizarAvisoEscopo() {
-      if (!aviso) return;
-
-      if (!selectionReady) {
-        // Antes de escolher produto+edição, o aviso NUNCA aparece.
-        aviso.style.display = "none";
-        return;
-      }
-
-      const href = (linkEscopo?.getAttribute("href") || "").trim();
-      const visivel = linkEscopo && linkEscopo.style.display !== "none";
-
-      if (!href || !visivel) {
-        aviso.style.display = "block";
-      } else {
-        aviso.style.display = "none";
-      }
-    }
-
-    // Observa mudanças no botão feitas pelo script (href/estilo/classe)
-    const _obs = new MutationObserver(atualizarAvisoEscopo);
-    _obs.observe(linkEscopo, { attributes: true, attributeFilter: ["href", "style", "class"] });
-
-    // ---------- Validação de dados ----------
-    if (!Array.isArray(window.dados)) {
-      console.error("dados.js não carregou ou não definiu 'window.dados'.");
-      if (resultado) {
-        resultado.textContent = "Erro ao carregar dados. Tente Ctrl+F5 (Windows) / Cmd+Shift+R (Mac).";
-      }
-      // Não segue o fluxo se dados não existem
-      throw new Error("window.dados undefined");
-    }
-    const dados = window.dados;
-
-    // ---------- Popular Produtos ----------
-    const produtos = [...new Set(dados.map(d => d.produto))].sort();
-    produtos.forEach(p => {
-      const opt = document.createElement("option");
-      opt.value = opt.textContent = p;
-      produtoSelect.appendChild(opt);
-    });
-
-    // ---------- Helpers para o link ----------
-    function esconderLink() {
-      linkEscopo.style.display = "none";
-      linkEscopo.removeAttribute("href");
-      linkEscopo.textContent = "";
-      atualizarAvisoEscopo();
-    }
-
-    function mostrarLink(caminho) {
-      const url = BASE_SP + encodeURIComponent(caminho).replace(/%2F/g, "/");
-      linkEscopo.href = url;
-      linkEscopo.textContent = "📄 Abrir escopo";
-      linkEscopo.style.display = "inline-block";
-      atualizarAvisoEscopo();
-    }
-
-    // ---------- Eventos ----------
-    produtoSelect.addEventListener("change", () => {
-      const produto = produtoSelect.value;
-
-      // Ao mudar de produto, ainda não temos seleção completa
-      selectionReady = false;
-
-      edicaoSelect.innerHTML = '<option value="">Selecione</option>';
-      resultado.textContent = "";
-      esconderLink();
-      // Esconde aviso ao trocar de produto
-      aviso.style.display = "none";
-
-      if (!produto) {
-        edicaoSelect.disabled = true;
-        return;
-      }
-
-      const edicoes = dados
-        .filter(d => d.produto === produto)
-        .map(d => d.edicao);
-
-      [...new Set(edicoes)].sort().forEach(ed => {
-        const opt = document.createElement("option");
-        opt.value = opt.textContent = ed;
-        edicaoSelect.appendChild(opt);
-      });
-
-      edicaoSelect.disabled = false;
-    });
-
-    edicaoSelect.addEventListener("change", () => {
-      const produto = produtoSelect.value;
-      const edicao  = edicaoSelect.value;
-
-      resultado.textContent = "";
-      esconderLink();
-
-      // Só consideramos "selectionReady" quando há produto+edição válidos
-      selectionReady = Boolean(produto && edicao);
-
-      const item = dados.find(d => d.produto === produto && d.edicao === edicao);
-
-      if (!item) {
-        // Produto+edição escolhidos mas sem item correspondente => mostra aviso
-        atualizarAvisoEscopo();
-        return;
-      }
-
-      resultado.textContent = `⏱️ ${item.horas} horas de implantação`;
-
-      if (item.caminho) {
-        mostrarLink(item.caminho);
-      } else {
-        // Não tem caminho => sem botão => pode mostrar aviso
-        atualizarAvisoEscopo();
-      }
-    });
-
-    // ---------- Botão Limpar ----------
-    document.getElementById("btnLimpar").addEventListener("click", () => {
-      produtoSelect.value = "";
-      edicaoSelect.innerHTML = '<option value="">Selecione</option>';
-      edicaoSelect.disabled = true;
-
-      resultado.textContent = "Selecione um produto e uma edição.";
-      esconderLink();
-
-      // Reset do estado -> não mostrar aviso na tela inicial
-      selectionReady = false;
-      aviso.style.display = "none";
-
-      // dispara change para manter fluxo padrão
-      produtoSelect.dispatchEvent(new Event("change"));
-    });
-
-    // Estado inicial do aviso — não exibir
-    selectionReady = false;
-    aviso.style.display = "none";
-  </script>
+  <main>
+    <img src="assets/logo-centric.png" alt="Centric" class="logo" />
+    <div class="brand">Centric</div>
+    <h1>Portal de Horas</h1>
+    <p>Escolha o serviço para consultar as horas estimadas e o escopo correspondente.</p>
+    <nav class="services" aria-label="Serviços disponíveis">
+      <a class="service-link" href="implantacao.html">Implantação</a>
+      <a class="service-link" href="treinamento.html">Treinamento</a>
+    </nav>
+    <div class="footer">Centric • ManageEngine • Portal de horas de implantação e treinamento</div>
+  </main>
 </body>
 </html>
