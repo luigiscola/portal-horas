@@ -2,11 +2,11 @@ window.dadosTreinamento = [
   { produto: "Vulnerability Manager Plus", edicao: "Enterprise", horas: 10, caminho: "Vulnerability Manager Plus/Vulnerability Manager Plus - Enterprise.docx" },
   { produto: "Vulnerability Manager Plus", edicao: "Professional", horas: 8, caminho: "Vulnerability Manager Plus/Vulnerability Manager Plus - Professional.docx" },
 
-  { produto: "ADAudit Plus", edicao: "Professional", horas: 10, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Professional.docx" },
-  { produto: "ADAudit Plus", edicao: "Standard", horas: 8, caminho: "AD Audit Plus/Escopo_de_Implantação_-_ADAudit_Standard.docx" },
+  { produto: "ADAudit Plus", edicao: "Professional", horas: 10, caminho: "AD Audit Plus/Escopo_de_Treinamento_-_ADAudit_Professional.docx" },
+  { produto: "ADAudit Plus", edicao: "Standard", horas: 8, caminho: "AD Audit Plus/Escopo_de_Treinamento_-_ADAudit_Standard.docx" },
 
-  { produto: "AD360 (ADAudit, ADManager e ADSelfService)", edicao: "Professional", horas: 28, caminho: "AD360/Escopo_de_Implantação_-_AD360_Professional.docx" },
-  { produto: "AD360 (ADAudit, ADManager e ADSelfService)", edicao: "Standard", horas: 22, caminho: "AD360/Escopo_de_Implantação_-_AD360_Standard.docx" },
+  { produto: "AD360 (ADAudit, ADManager e ADSelfService)", edicao: "Professional", horas: 28, caminho: "AD360/Escopo_de_Treinamento_-_AD360_Professional.docx" },
+  { produto: "AD360 (ADAudit, ADManager e ADSelfService)", edicao: "Standard", horas: 22, caminho: "AD360/Escopo_de_Treinamento_-_AD360_Standard.docx" },
 
   { produto: "Application Control Plus", edicao: "Professional", horas: 8, caminho: "Application Control/Application Control Plus - Professional.docx" },
   { produto: "DeviceControl Plus", edicao: "Professional", horas: 8, caminho: "Device Control Plus/DeviceControl Plus - Professional.docx" },
@@ -33,78 +33,78 @@ window.dadosTreinamento = [
   { produto: "Endpoint Central MSP", edicao: "Cloud Professional", horas: 24, caminho: "Endpoint Central MSP/Endpoint Central MSP Cloud - Professional.docx" },
   { produto: "Endpoint Central MSP", edicao: "On-Premise Enterprise", horas: 16, caminho: "Endpoint Central MSP/Endpoint Central MSP On-Prem - Enterprise.docx" },
 
-  { produto: "OpManager", edicao: "Professional", horas: 16, caminho: "OpManager/Escopo de Implantação - OPManager - Professional Edition.docx" },
-  { produto: "OpManager", edicao: "Enterprise", horas: 20, caminho: "OpManager/Escopo de Implantação - OPManager- Enterprise Edition_.docx" },
-  
-  { produto: "OpManager Plus", edicao: "Professional", horas: 16, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Professional Edition-.docx" },
-  { produto: "OpManager Plus", edicao: "Enterprise", horas: 20, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Enterprise Edition.docx" },
+  { produto: "OpManager", edicao: "Professional", horas: 16, caminho: "OpManager/Escopo de Treinamento - OPManager - Professional Edition.docx" },
+  { produto: "OpManager", edicao: "Enterprise", horas: 20, caminho: "OpManager/Escopo de Treinamento - OPManager- Enterprise Edition_.docx" },
 
-  { produto: "OpManager MSP", edicao: "-", horas: 20, caminho: "OpManager MSP/Escopo de Implantação - OPManager - MSP Edition_.docx" },
+  { produto: "OpManager Plus", edicao: "Professional", horas: 16, caminho: "OpManager Plus/Escopo de Treinamento - OPManager PLus - Professional Edition-.docx" },
+  { produto: "OpManager Plus", edicao: "Enterprise", horas: 20, caminho: "OpManager Plus/Escopo de Treinamento - OPManager PLus - Enterprise Edition.docx" },
+
+  { produto: "OpManager MSP", edicao: "-", horas: 20, caminho: "OpManager MSP/Escopo de Treinamento - OPManager - MSP Edition_.docx" },
 
   { produto: "Applications Manager", edicao: "Professional", horas: 14, caminho: "Applications Manager/Applications Manager - Professional.docx" },
-  { produto: "Applications Manager", edicao: "Enterprise", horas: 16, caminho: "Applications Manager/Escopo de Implantação - Application Manager - Enterprise Edition.docx" },
+  { produto: "Applications Manager", edicao: "Enterprise", horas: 16, caminho: "Applications Manager/Escopo de Treinamento - Application Manager - Enterprise Edition.docx" },
 
-  { produto: "Site24x7", edicao: "Elite", horas: 24, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - Elite Edition.docx" },
-  { produto: "Site24x7", edicao: "Professional", horas: 20, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - Professional Edition.docx" },
-  { produto: "Site24x7", edicao: "MSP", horas: 26, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - MSP Edition.docx" },
+  { produto: "Site24x7", edicao: "Elite", horas: 24, caminho: "Site24x7/Escopo de Treinamento - Site 24x7 - Elite Edition.docx" },
+  { produto: "Site24x7", edicao: "Professional", horas: 20, caminho: "Site24x7/Escopo de Treinamento - Site 24x7 - Professional Edition.docx" },
+  { produto: "Site24x7", edicao: "MSP", horas: 26, caminho: "Site24x7/Escopo de Treinamento - Site 24x7 - MSP Edition.docx" },
 
-  { produto: "ServiceDesk Plus", edicao: "Standard", horas: 10, caminho: "ServiceDesk Plus/Escopo de Implantação - SDP Standard.docx" },
-  { produto: "ServiceDesk Plus", edicao: "Professional", horas: 20, caminho: "ServiceDesk Plus/Escopo de Implantação - SDP Professional.docx" },
-  { produto: "ServiceDesk Plus", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus/Escopo de Implantação - SDP Enterprise.docx" },
+  { produto: "ServiceDesk Plus", edicao: "Standard", horas: 10, caminho: "ServiceDesk Plus/Escopo de Treinamento - SDP Standard.docx" },
+  { produto: "ServiceDesk Plus", edicao: "Professional", horas: 20, caminho: "ServiceDesk Plus/Escopo de Treinamento - SDP Professional.docx" },
+  { produto: "ServiceDesk Plus", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus/Escopo de Treinamento - SDP Enterprise.docx" },
 
-  { produto: "ServiceDesk Plus MSP", edicao: "On-Premise Standard", horas: 10, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Standard.docx" },
-  { produto: "ServiceDesk Plus MSP", edicao: "On-Premise Professional", horas: 20, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Professional.docx" },
-  { produto: "ServiceDesk Plus MSP", edicao: "On-Premise Enterprise", horas: 30, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Enterprise.docx" },
-  { produto: "ServiceDesk Plus MSP", edicao: "Cloud Standard", horas: 10, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Cloud Standard.docx" },
-  { produto: "ServiceDesk Plus MSP", edicao: "Cloud Professional", horas: 20, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Cloud Professional.docx" },
-  { produto: "ServiceDesk Plus MSP", edicao: "Cloud Enterprise", horas: 30, caminho: "Service Desk MSP/Escopo de Implantação - SDP MSP Cloud Enterprise.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "On-Premise Standard", horas: 10, caminho: "Service Desk MSP/Escopo de Treinamento - SDP MSP Standard.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "On-Premise Professional", horas: 20, caminho: "Service Desk MSP/Escopo de Treinamento - SDP MSP Professional.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "On-Premise Enterprise", horas: 30, caminho: "Service Desk MSP/Escopo de Treinamento - SDP MSP Enterprise.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "Cloud Standard", horas: 10, caminho: "Service Desk MSP/Escopo de Treinamento - SDP MSP Cloud Standard.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "Cloud Professional", horas: 20, caminho: "Service Desk MSP/Escopo de Treinamento - SDP MSP Cloud Professional.docx" },
+  { produto: "ServiceDesk Plus MSP", edicao: "Cloud Enterprise", horas: 30, caminho: "Service Desk MSP/Escopo de Treinamento - SDP MSP Cloud Enterprise.docx" },
 
-  { produto: "ServiceDesk Plus Cloud", edicao: "Standard", horas: 10, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação SDP Cloud Standard.docx" },
-  { produto: "ServiceDesk Plus Cloud", edicao: "Professional", horas: 20, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação - SDP Cloud Professional.docx" },
-  { produto: "ServiceDesk Plus Cloud", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus Cloud/Escopo de Implantação - SDP Cloud Enterprise.docx" },
+  { produto: "ServiceDesk Plus Cloud", edicao: "Standard", horas: 10, caminho: "ServiceDesk Plus Cloud/Escopo de Treinamento SDP Cloud Standard.docx" },
+  { produto: "ServiceDesk Plus Cloud", edicao: "Professional", horas: 20, caminho: "ServiceDesk Plus Cloud/Escopo de Treinamento - SDP Cloud Professional.docx" },
+  { produto: "ServiceDesk Plus Cloud", edicao: "Enterprise", horas: 30, caminho: "ServiceDesk Plus Cloud/Escopo de Treinamento - SDP Cloud Enterprise.docx" },
 
-  { produto: "ADManager Plus", edicao: "Standard", horas: 8, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Standard.docx" },
-  { produto: "ADManager Plus", edicao: "Professional", horas: 10, caminho: "ADManager Plus/Escopo_de_Implantação_-_ADManager_Professional.docx" },
-  
-  { produto: "ADSelfService Plus", edicao: "Standard", horas: 6, caminho: "ADSelfService Plus/Escopo_de_Implantação_-_ADSelfService_Standard.docx" },
-  { produto: "ADSelfService Plus", edicao: "Professional", horas: 8, caminho: "ADSelfService Plus/Escopo_de_Implantação_-_ADSelfService_Professional.docx" },
+  { produto: "ADManager Plus", edicao: "Standard", horas: 8, caminho: "ADManager Plus/Escopo_de_Treinamento_-_ADManager_Standard.docx" },
+  { produto: "ADManager Plus", edicao: "Professional", horas: 10, caminho: "ADManager Plus/Escopo_de_Treinamento_-_ADManager_Professional.docx" },
+
+  { produto: "ADSelfService Plus", edicao: "Standard", horas: 6, caminho: "ADSelfService Plus/Escopo_de_Treinamento_-_ADSelfService_Standard.docx" },
+  { produto: "ADSelfService Plus", edicao: "Professional", horas: 8, caminho: "ADSelfService Plus/Escopo_de_Treinamento_-_ADSelfService_Professional.docx" },
 
   { produto: "Analytics Plus", edicao: "Professional", horas: 14, caminho: "" },
   { produto: "Analytics Plus", edicao: "Enterprise", horas: 16, caminho: "" },
 
-  { produto: "Asset Explorer", edicao: "-", horas: 10, caminho: "Asset Explorer/Escopo de Implantação - AssetExplorer.docx" },
-  { produto: "Asset Explorer Cloud", edicao: "-", horas: 10, caminho: "Asset Explorer Cloud/Escopo de Implantação - AssetExplorer Cloud.docx" },
+  { produto: "Asset Explorer", edicao: "-", horas: 10, caminho: "Asset Explorer/Escopo de Treinamento - AssetExplorer.docx" },
+  { produto: "Asset Explorer Cloud", edicao: "-", horas: 10, caminho: "Asset Explorer Cloud/Escopo de Treinamento - AssetExplorer Cloud.docx" },
 
-  { produto: "GO-Global", edicao: "-", horas: 2, caminho: "Go-Global/Escopo-Implantação-GG.docx" },
+  { produto: "GO-Global", edicao: "-", horas: 2, caminho: "Go-Global/Escopo-Treinamento-GG.docx" },
 
-  { produto: "PasswordManager Pro", edicao: "Standard", horas: 10, caminho: "PasswordManager Pro/Escopo de Implantação - PMP - Standart Edition.docx" },
-  { produto: "PasswordManager Pro", edicao: "Premium", horas: 12, caminho: "PasswordManager Pro/Escopo de Implantação - PMP - Premium Edition.docx" },
-  { produto: "PasswordManager Pro", edicao: "Enterprise", horas: 14, caminho: "PasswordManager Pro/Escopo de Implantação - PMP - Enterprise Edition.docx" },
-  { produto: "PasswordManager Pro MSP", edicao: "-", horas: 20, caminho: "PasswordManager Pro MSP/Escopo de Implantação - PMP -  MSP.docx" },
-  { produto: "PAM 360", edicao: "-", horas: 16, caminho: "PAM 360/Escopo de Implantação - PAM360.docx" },
-  { produto: "PAM 360 MSP", edicao: "-", horas: 20, caminho: "PAM 360 MSP/Escopo de Implantação - PAM360 - MSP.docx" },
-  { produto: "KeyManager Plus", edicao: "-", horas: 6, caminho: "Key Manager Plus/Escopo de Implantação - Key Manager Plus.docx" },
+  { produto: "PasswordManager Pro", edicao: "Standard", horas: 10, caminho: "PasswordManager Pro/Escopo de Treinamento - PMP - Standart Edition.docx" },
+  { produto: "PasswordManager Pro", edicao: "Premium", horas: 12, caminho: "PasswordManager Pro/Escopo de Treinamento - PMP - Premium Edition.docx" },
+  { produto: "PasswordManager Pro", edicao: "Enterprise", horas: 14, caminho: "PasswordManager Pro/Escopo de Treinamento - PMP - Enterprise Edition.docx" },
+  { produto: "PasswordManager Pro MSP", edicao: "-", horas: 20, caminho: "PasswordManager Pro MSP/Escopo de Treinamento - PMP -  MSP.docx" },
+  { produto: "PAM 360", edicao: "-", horas: 16, caminho: "PAM 360/Escopo de Treinamento - PAM360.docx" },
+  { produto: "PAM 360 MSP", edicao: "-", horas: 20, caminho: "PAM 360 MSP/Escopo de Treinamento - PAM360 - MSP.docx" },
+  { produto: "KeyManager Plus", edicao: "-", horas: 6, caminho: "Key Manager Plus/Escopo de Treinamento - Key Manager Plus.docx" },
 
-  { produto: "Firewall Analyzer", edicao: "Professional", horas: 14, caminho: "Firewall Analyzer/Escopo de Implantação - Firewall Analyzer - Professional Edition1.docx" },
+  { produto: "Firewall Analyzer", edicao: "Professional", horas: 14, caminho: "Firewall Analyzer/Escopo de Treinamento - Firewall Analyzer - Professional Edition1.docx" },
 
-  { produto: "M365 Management", edicao: "Standard", horas: 4, caminho: "M365 Management/Escopo_de_Implantação_-_M365MP_Standard.docx" },
-  { produto: "M365 Management", edicao: "Professional", horas: 6, caminho: "M365 Management/Escopo_de_Implantação_-_M365MP_Professional.docx" },
+  { produto: "M365 Management", edicao: "Standard", horas: 4, caminho: "M365 Management/Escopo_de_Treinamento_-_M365MP_Standard.docx" },
+  { produto: "M365 Management", edicao: "Professional", horas: 6, caminho: "M365 Management/Escopo_de_Treinamento_-_M365MP_Professional.docx" },
 
   { produto: "MDM MSP", edicao: "On-Premise Standard", horas: 12, caminho: "Mobile Device Management Plus MSP/MDM MSP On-Prem - Standard.docx" },
   { produto: "MDM MSP", edicao: "On-Premise Professional", horas: 14, caminho: "Mobile Device Management Plus MSP/MDM MSP On-Prem - Professional.docx" },
   { produto: "MDM MSP", edicao: "Cloud Standard", horas: 12, caminho: "Mobile Device Management Plus MSP/MDM MSP Cloud - Standard.docx" },
   { produto: "MDM MSP", edicao: "Cloud Professional", horas: 14, caminho: "Mobile Device Management Plus MSP/MDM MSP Cloud - Professional.docx" },
-  
-  { produto: "NetFlow Analyzer", edicao: "Professional", horas: 16, caminho: "NetFlow Analyzer/Escopo de Implantação - Netflow Analyzer - Professional Edition.docx" },
 
-  { produto: "Network Configuration Manager", edicao: "Professional", horas: 16, caminho: "Network Configuration Manager/Escopo de Implantação - NCM - Professional Edition - Copia.docx" },
+  { produto: "NetFlow Analyzer", edicao: "Professional", horas: 16, caminho: "NetFlow Analyzer/Escopo de Treinamento - Netflow Analyzer - Professional Edition.docx" },
+
+  { produto: "Network Configuration Manager", edicao: "Professional", horas: 16, caminho: "Network Configuration Manager/Escopo de Treinamento - NCM - Professional Edition - Copia.docx" },
 
   { produto: "Patch Manager Plus On-Premise", edicao: "Professional", horas: 6, caminho: "Patch Manager Plus/Patch Manager Plus On-Prem Professional.docx" },
   { produto: "Patch Manager Plus On-Premise", edicao: "Enterprise", horas: 8, caminho: "Patch Manager Plus/Patch Manager Plus On-Prem Enterprise .docx" },
   { produto: "Patch Manager Plus Cloud", edicao: "Professional", horas: 6, caminho: "Patch Manager Plus Cloud/Patch Manager Plus Cloud Professional.docx" },
   { produto: "Patch Manager Plus Cloud", edicao: "Enterprise", horas: 8, caminho: "Patch Manager Plus Cloud/Patch Manager Plus Cloud Enterprise .docx" },
 
-  { produto: "Recovery Manager Plus", edicao: "Standard", horas: 4, caminho: "Recovery Manager Plus/Escopo_de_Implantação_-_RecoveryManagerPlus_Standard.docx" },
+  { produto: "Recovery Manager Plus", edicao: "Standard", horas: 4, caminho: "Recovery Manager Plus/Escopo_de_Treinamento_-_RecoveryManagerPlus_Standard.docx" },
 
   { produto: "Data Security Plus", edicao: "-", horas: 0, caminho: "" },
   { produto: "EventLog Analyzer", edicao: "-", horas: 0, caminho: "" },
@@ -117,5 +117,4 @@ window.dadosTreinamento = [
   { produto: "SaaS Manager Plus", edicao: "-", horas: 0, caminho: "" },
   { produto: "Sharepoint Manager Plus", edicao: "-", horas: 0, caminho: "" },
   { produto: "SupportCenter Plus", edicao: "-", horas: 0, caminho: "" },
-  
 ];
