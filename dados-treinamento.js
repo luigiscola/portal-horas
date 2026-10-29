@@ -36,6 +36,9 @@ window.dadosTreinamento = [
   { produto: "OpManager", edicao: "Professional", horas: 16, caminho: "OpManager/Escopo de Treinamento - OPManager - Professional Edition.docx" },
   { produto: "OpManager", edicao: "Enterprise", horas: 20, caminho: "OpManager/Escopo de Treinamento - OPManager- Enterprise Edition_.docx" },
 
+  { produto: "OpManagerNexus Cloud", edicao: "Professional", horas: 16, caminho: "OpManagerNexus/Escopo de Treinamento - OpManagerNexus - Cloud Professional Edition.docx" },
+  { produto: "OpManagerNexus On-Premise", edicao: " Professional", horas: 16, caminho: "OpManagerNexus/Escopo de Treinamento - OpManagerNexus - On-Premise Professional Edition_.docx" },
+
   { produto: "OpManager Plus", edicao: "Professional", horas: 16, caminho: "OpManager Plus/Escopo de Treinamento - OPManager PLus - Professional Edition-.docx" },
   { produto: "OpManager Plus", edicao: "Enterprise", horas: 20, caminho: "OpManager Plus/Escopo de Treinamento - OPManager PLus - Enterprise Edition.docx" },
 
