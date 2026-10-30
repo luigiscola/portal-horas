@@ -36,17 +36,17 @@ window.dados = [
   { produto: "OpManager", edicao: "Professional", horas: 16, caminho: "OpManager/Escopo de Implantação - OPManager - Professional Edition.docx" },
   { produto: "OpManager", edicao: "Enterprise", horas: 20, caminho: "OpManager/Escopo de Implantação - OPManager- Enterprise Edition_.docx" },
   
-  { produto: "OpManager Plus", edicao: "Professional", horas: 16, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Professional Edition-.docx" },
-  { produto: "OpManager Plus", edicao: "Enterprise", horas: 20, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Enterprise Edition.docx" },
+  { produto: "OpManagerNexus On-Premise", edicao: "Professional", horas: 16, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Professional Edition-.docx" },
+  { produto: "OpManagerNexus On-Premise", edicao: "Enterprise", horas: 20, caminho: "OpManager Plus/Escopo de Implantação - OPManager PLus - Enterprise Edition.docx" },
 
   { produto: "OpManager MSP", edicao: "-", horas: 20, caminho: "OpManager MSP/Escopo de Implantação - OPManager - MSP Edition_.docx" },
 
   { produto: "Applications Manager", edicao: "Professional", horas: 14, caminho: "Applications Manager/Applications Manager - Professional.docx" },
   { produto: "Applications Manager", edicao: "Enterprise", horas: 16, caminho: "Applications Manager/Escopo de Implantação - Application Manager - Enterprise Edition.docx" },
 
-  { produto: "Site24x7", edicao: "Elite", horas: 24, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - Elite Edition.docx" },
-  { produto: "Site24x7", edicao: "Professional", horas: 20, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - Professional Edition.docx" },
-  { produto: "Site24x7", edicao: "MSP", horas: 26, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - MSP Edition.docx" },
+  { produto: "OpManagerNexus Cloud", edicao: "Elite", horas: 24, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - Elite Edition.docx" },
+  { produto: "OpManagerNexus Cloud", edicao: "Professional", horas: 20, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - Professional Edition.docx" },
+  { produto: "OpManagerNexus Cloud", edicao: "MSP", horas: 26, caminho: "Site24x7/Escopo de Implantação - Site 24x7 - MSP Edition.docx" },
 
   { produto: "ServiceDesk Plus", edicao: "Standard", horas: 10, caminho: "ServiceDesk Plus/Escopo de Implantação - SDP Standard.docx" },
   { produto: "ServiceDesk Plus", edicao: "Professional", horas: 20, caminho: "ServiceDesk Plus/Escopo de Implantação - SDP Professional.docx" },
