@@ -39,17 +39,10 @@ window.dadosTreinamento = [
   { produto: "OpManagerNexus Cloud", edicao: "Professional", horas: 16, caminho: "OpManagerNexus/Escopo de Treinamento - OpManagerNexus - Cloud Professional Edition.docx" },
   { produto: "OpManagerNexus On-Premise", edicao: " Professional", horas: 16, caminho: "OpManagerNexus/Escopo de Treinamento - OpManagerNexus - On-Premise Professional Edition_.docx" },
 
-  { produto: "OpManager Plus", edicao: "Professional", horas: 16, caminho: "OpManager Plus/Escopo de Treinamento - OPManager PLus - Professional Edition-.docx" },
-  { produto: "OpManager Plus", edicao: "Enterprise", horas: 20, caminho: "OpManager Plus/Escopo de Treinamento - OPManager PLus - Enterprise Edition.docx" },
-
   { produto: "OpManager MSP", edicao: "-", horas: 20, caminho: "OpManager MSP/Escopo de Treinamento - OPManager - MSP Edition_.docx" },
 
   { produto: "Applications Manager", edicao: "Professional", horas: 14, caminho: "Applications Manager/Applications Manager - Professional.docx" },
   { produto: "Applications Manager", edicao: "Enterprise", horas: 16, caminho: "Applications Manager/Escopo de Treinamento - Application Manager - Enterprise Edition.docx" },
-
-  { produto: "Site24x7", edicao: "Elite", horas: 24, caminho: "Site24x7/Escopo de Treinamento - Site 24x7 - Elite Edition.docx" },
-  { produto: "Site24x7", edicao: "Professional", horas: 20, caminho: "Site24x7/Escopo de Treinamento - Site 24x7 - Professional Edition.docx" },
-  { produto: "Site24x7", edicao: "MSP", horas: 26, caminho: "Site24x7/Escopo de Treinamento - Site 24x7 - MSP Edition.docx" },
 
   { produto: "ServiceDesk Plus", edicao: "Standard", horas: 10, caminho: "ServiceDesk Plus/Escopo de Treinamento - SDP Standard.docx" },
   { produto: "ServiceDesk Plus", edicao: "Professional", horas: 20, caminho: "ServiceDesk Plus/Escopo de Treinamento - SDP Professional.docx" },
